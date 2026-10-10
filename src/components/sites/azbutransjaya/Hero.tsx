@@ -10,17 +10,17 @@ export function Hero() {
 
   const animFadeUp = !shouldReduceMotion
     ? {
-        initial: { opacity: 0, y: 18 },
+        initial: { opacity: 0, y: 16 },
         animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
+        transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as const },
       }
     : {};
 
   const animVisual = !shouldReduceMotion
     ? {
-        initial: { opacity: 0, x: 28, scale: 0.98 },
-        animate: { opacity: 1, x: 0, scale: 1 },
-        transition: { duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const },
+        initial: { opacity: 0, scale: 0.98 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] as const },
       }
     : {};
 
@@ -31,13 +31,12 @@ export function Hero() {
         <div className="mobile-hero-bg-layer" aria-hidden="true">
           <Image
             src="/images/drivemate/city-bg.jpg"
-            alt="Lombok Landmark Background"
+            alt=""
             fill
             sizes="100vw"
             priority
-            className="mobile-hero-bg-img opacity-25"
+            className="mobile-hero-bg-img opacity-20"
           />
-          <div className="mobile-hero-gradient-scrim" />
         </div>
 
         <div className="mobile-hero-content">
@@ -48,36 +47,37 @@ export function Hero() {
             <span>Lombok BIZAM</span>
           </div>
           <p className="mobile-hero-desc">
-            Transportasi terpercaya sejak tahun 2012. 12 pilihan armada terawat lengkap <strong>Include Driver + BBM + Air Mineral</strong>.
+            Transportasi terpercaya sejak tahun 2012. 12 armada prima lengkap <strong>Include Driver + BBM + Mineral</strong>.
           </p>
+
           <div className="mobile-hero-actions">
-            <a href="#armada" className="button-link button-primary mobile-hero-btn-primary">
-              <CarFront size={18} />
-              <span>Lihat 12 Armada</span>
-            </a>
             <a
               href={whatsappUrl()}
               target="_blank"
               rel="noreferrer"
-              className="button-link button-secondary mobile-hero-btn-secondary"
+              className="button-link button-primary mobile-hero-btn-primary"
             >
               <MessageCircle size={18} />
               <span>Booking via WhatsApp</span>
+            </a>
+            <a href="#armada" className="button-link button-secondary mobile-hero-btn-secondary">
+              <CarFront size={18} />
+              <span>Lihat Armada</span>
             </a>
           </div>
 
           <div className="mobile-hero-trust-chips">
             <span className="mobile-trust-chip">
               <ShieldCheck size={13} className="mobile-trust-icon" />
-              Include Driver + BBM + Mineral
+              Include Driver + BBM
             </span>
             <span className="mobile-trust-chip">
               <Award size={13} className="mobile-trust-icon" />
-              Terpercaya Sejak 2012
+              Sejak Tahun 2012
             </span>
             <span className="mobile-trust-chip">
               <MapPin size={13} className="mobile-trust-icon" />
-              Standby BIZAM Lombok
+              Standby BIZAM
             </span>
           </div>
         </div>
@@ -109,29 +109,29 @@ export function Hero() {
             <span>BIZAM Lombok</span>
           </h1>
           <p className="hero-description">
-            Transportasi terpercaya sejak tahun 2012 di Lombok. Menyediakan 12 unit armada prima lengkap <strong>Include Driver + BBM + Air Mineral</strong> untuk airport transfer BIZAM, city tour, Sasak &amp; Gili, hingga perjalanan luar daerah.
+            Transportasi terpercaya sejak tahun 2012 di Lombok. Pilihan 12 armada prima lengkap <strong>Include Driver + BBM + Air Mineral</strong> untuk airport transfer BIZAM, city tour, Sasak &amp; Gili.
           </p>
 
           <div className="hero-actions">
-            <a href="#armada" className="button-link button-primary">
-              <CarFront size={18} />
-              <span>Lihat 12 Armada</span>
-            </a>
             <a
               href={whatsappUrl()}
               target="_blank"
               rel="noreferrer"
-              className="button-link button-secondary"
+              className="button-link button-primary"
             >
               <MessageCircle size={18} />
               <span>Booking via WhatsApp</span>
+            </a>
+            <a href="#armada" className="button-link button-secondary">
+              <CarFront size={18} />
+              <span>Lihat Armada</span>
             </a>
           </div>
 
           <div className="hero-trust">
             <span>
               <ShieldCheck size={16} />
-              Include Driver + BBM + Mineral
+              Driver + BBM + Mineral
             </span>
             <span>
               <Award size={16} />
@@ -139,7 +139,7 @@ export function Hero() {
             </span>
             <span>
               <MapPin size={16} />
-              Standby di BIZAM Lombok
+              Standby BIZAM Lombok
             </span>
           </div>
         </motion.div>

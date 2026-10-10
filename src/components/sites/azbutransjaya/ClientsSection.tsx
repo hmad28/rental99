@@ -1,80 +1,121 @@
 "use client";
 
 import Image from "next/image";
-import { Award } from "lucide-react";
+import { Award, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { CLIENTS_DATA } from "./constants";
 import { Reveal } from "./Reveal";
 
 export function ClientsSection() {
-  // Duplicate for seamless infinite loop (14 * 2 = 28)
-  const duplicatedLogos = [...CLIENTS_DATA, ...CLIENTS_DATA];
+  // Split 14 logos into 2 columns of 7 logos each
+  const col1Logos = CLIENTS_DATA.slice(0, 7);
+  const col2Logos = CLIENTS_DATA.slice(7, 14);
+
+  // Duplicate each column for a seamless infinite loop
+  const duplicatedCol1 = [...col1Logos, ...col1Logos];
+  const duplicatedCol2 = [...col2Logos, ...col2Logos];
 
   return (
-    <section id="klien" className="relative overflow-hidden bg-white py-20 lg:py-24 border-y border-[#E2E8F0]">
-      <div className="container-page mb-12 text-center">
-        <Reveal>
-          {/* Claim badge */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 px-4 py-1.5 text-xs font-bold text-[#2563EB] shadow-xs">
-            <Award className="size-4 text-[#2563EB]" />
-            <span>Transportasi terpercaya sejak tahun 2012</span>
-          </div>
-
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#0F172A] sm:text-4xl">
-            Dipercaya Oleh Klien &amp; Mitra Kami
-          </h2>
-
-          <p className="mx-auto mt-3.5 max-w-2xl text-sm leading-relaxed text-[#64748B]">
-            Rental99 telah menjadi partner perjalanan terpercaya bagi kementerian, BUMN, perusahaan multinasional, perbankan, maskapai, dan ribuan wisatawan di Lombok &amp; sekitarnya.
-          </p>
-        </Reveal>
-      </div>
-
-      {/* Infinite Scroll Marquee Container */}
-      <div className="relative w-full overflow-hidden">
-        {/* Left and Right Gradient Fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 sm:w-32 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent" />
-
-        {/* Marquee Track */}
-        <div className="client-marquee-track flex gap-5 py-3 hover:[animation-play-state:paused]">
-          {duplicatedLogos.map((client, idx) => (
-            <div
-              key={`${client.name}-${idx}`}
-              className="flex h-20 min-w-[190px] sm:min-w-[210px] items-center justify-center rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] px-6 py-3.5 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-[#2563EB]/40 hover:bg-white hover:shadow-md"
-              title={client.name}
-            >
-              <div className="relative h-11 w-32 flex items-center justify-center">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  sizes="160px"
-                  className="object-contain filter grayscale contrast-125 opacity-80 transition duration-300 hover:filter-none hover:opacity-100"
-                />
+    <section id="klien" className="relative overflow-hidden bg-[#F8FAFC] py-16 sm:py-20 lg:py-24 border-b border-[#E2E8F0]">
+      <div className="container-page">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+          {/* Sisi Kiri: Headline & Teks Singkat Sesuai Arahan Client */}
+          <div className="lg:col-span-5">
+            <Reveal>
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold text-[#2563EB]">
+                <Award className="size-3.5" />
+                <span>Transportasi terpercaya sejak tahun 2012</span>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Bottom trust highlights */}
-      <div className="container-page mt-12">
-        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4 text-center">
-          <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
-            <span className="text-2xl font-black text-[#2563EB]">12+</span>
-            <span className="block mt-1 text-xs font-semibold text-slate-600">Tahun Pengalaman</span>
+              <h2 className="mt-3.5 text-2xl font-extrabold tracking-tight text-[#0F172A] sm:text-3xl lg:text-4xl leading-tight">
+                Klien Kami
+              </h2>
+
+              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-[#64748B]">
+                Rental99 telah dipercaya oleh instansi kementerian, BUMN, korporasi nasional, dan ribuan pelanggan untuk layanan transportasi yang andal, aman, dan tepat waktu di Lombok.
+              </p>
+
+              {/* Trust Metric Highlights */}
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 max-w-sm">
+                <div className="rounded-xl border border-slate-200 bg-white p-3.5 shadow-xs">
+                  <div className="flex items-center gap-1.5 text-lg font-black text-[#2563EB]">
+                    <ShieldCheck className="size-4" />
+                    <span>12+ Tahun</span>
+                  </div>
+                  <p className="mt-0.5 text-[11px] font-medium text-slate-500">
+                    Pengalaman Melayani
+                  </p>
+                </div>
+                <div className="rounded-xl border border-slate-200 bg-white p-3.5 shadow-xs">
+                  <div className="flex items-center gap-1.5 text-lg font-black text-[#2563EB]">
+                    <CheckCircle2 className="size-4 text-emerald-600" />
+                    <span>14+ Mitra</span>
+                  </div>
+                  <p className="mt-0.5 text-[11px] font-medium text-slate-500">
+                    BUMN &amp; Instansi Resmi
+                  </p>
+                </div>
+              </div>
+            </Reveal>
           </div>
-          <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
-            <span className="text-2xl font-black text-[#2563EB]">14+</span>
-            <span className="block mt-1 text-xs font-semibold text-slate-600">Klien Korporat &amp; BUMN</span>
-          </div>
-          <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
-            <span className="text-2xl font-black text-[#2563EB]">12 Unit</span>
-            <span className="block mt-1 text-xs font-semibold text-slate-600">Armada Siap Jalan</span>
-          </div>
-          <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
-            <span className="text-2xl font-black text-[#2563EB]">24 Jam</span>
-            <span className="block mt-1 text-xs font-semibold text-slate-600">Standby di BIZAM</span>
+
+          {/* Sisi Kanan: Logo-logo Client dalam 2 Kolom Infinite Scroll Vertikal */}
+          <div className="lg:col-span-7">
+            <Reveal delay={0.1}>
+              <div className="relative h-[360px] sm:h-[420px] lg:h-[440px] overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-3 sm:p-4 shadow-xs">
+                {/* Top and Bottom Gradient Fades for Smooth Transition */}
+                <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-16 sm:h-20 bg-gradient-to-b from-white via-white/80 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-16 sm:h-20 bg-gradient-to-t from-white via-white/80 to-transparent" />
+
+                {/* 2 Vertical Marquee Columns */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 h-full">
+                  {/* Kolom Pertama: Scroll ke Atas */}
+                  <div className="relative overflow-hidden">
+                    <div className="client-marquee-up flex flex-col gap-3 sm:gap-3.5 hover:[animation-play-state:paused]">
+                      {duplicatedCol1.map((client, idx) => (
+                        <div
+                          key={`col1-${client.name}-${idx}`}
+                          className="flex h-16 sm:h-20 items-center justify-center rounded-xl border border-slate-100 bg-slate-50/70 p-3 sm:p-4 shadow-2xs transition duration-200 hover:border-blue-300 hover:bg-white hover:shadow-sm"
+                          title={client.name}
+                        >
+                          <div className="relative h-9 sm:h-11 w-full flex items-center justify-center">
+                            <Image
+                              src={client.logo}
+                              alt={client.name}
+                              fill
+                              sizes="(min-width: 1024px) 180px, 140px"
+                              className="object-contain filter grayscale opacity-75 transition duration-300 hover:filter-none hover:opacity-100"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Kolom Kedua: Scroll ke Bawah */}
+                  <div className="relative overflow-hidden">
+                    <div className="client-marquee-down flex flex-col gap-3 sm:gap-3.5 hover:[animation-play-state:paused]">
+                      {duplicatedCol2.map((client, idx) => (
+                        <div
+                          key={`col2-${client.name}-${idx}`}
+                          className="flex h-16 sm:h-20 items-center justify-center rounded-xl border border-slate-100 bg-slate-50/70 p-3 sm:p-4 shadow-2xs transition duration-200 hover:border-blue-300 hover:bg-white hover:shadow-sm"
+                          title={client.name}
+                        >
+                          <div className="relative h-9 sm:h-11 w-full flex items-center justify-center">
+                            <Image
+                              src={client.logo}
+                              alt={client.name}
+                              fill
+                              sizes="(min-width: 1024px) 180px, 140px"
+                              className="object-contain filter grayscale opacity-75 transition duration-300 hover:filter-none hover:opacity-100"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </div>

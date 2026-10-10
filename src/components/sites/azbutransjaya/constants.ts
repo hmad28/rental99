@@ -139,7 +139,7 @@ export const FLEET_DATA: Car[] = [
     transmission: "Manual",
     seats: "30–35 Kursi",
     price: 0,
-    priceLabel: "Order via WhatsApp",
+    priceLabel: "Order by WhatsApp",
     badge: "Bus Pariwisata",
     includes: "Include Driver + BBM + Air Mineral",
     features: ["Manual", "35 Kursi", "Karaoke & Bagasi Besar"],
@@ -151,7 +151,7 @@ export const FLEET_DATA: Car[] = [
     transmission: "Manual",
     seats: "45–50 Kursi",
     price: 0,
-    priceLabel: "Order via WhatsApp",
+    priceLabel: "Order by WhatsApp",
     badge: "Pariwisata Besar",
     includes: "Include Driver + BBM + Air Mineral",
     features: ["Manual", "50 Kursi", "Full AC & Fasilitas Tour"],
@@ -291,66 +291,37 @@ export const AREA_OPTIONS: AreaOption[] = [
   { id: "luar-daerah", label: "Luar Daerah (Sumbawa / Bima)", tag: "Luar Daerah" },
 ];
 
-export const SERVICES_DATA = [
+export interface ServiceItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  iconType: "compass" | "palmtree" | "plane" | "map";
+}
+
+export const SERVICES_DATA: ServiceItem[] = [
   {
-    title: "Rental Mobil + Driver",
-    description: "Sewa mobil harian terawat lengkap dengan pengemudi ramah, BBM, dan air mineral untuk kenyamanan tanpa lelah.",
-    image: "/images/gallery-fleet.png",
-    imageAlt: "Rental mobil plus driver Rental99 Lombok",
-    points: [
-      "Include Driver + BBM + Air Mineral",
-      "Armada terawat, wangi, dan ber-AC dingin",
-      "Driver lokal hafal seluruh rute wisata Lombok",
-    ],
-    iconType: "user",
+    id: "city-tour",
+    title: "Layanan City Tour",
+    subtitle: "Keliling destinasi kota Mataram, budaya, kuliner, dan pantai.",
+    iconType: "compass",
   },
   {
-    title: "Airport Transfer BIZAM",
-    description: "Layanan antar-jemput tepat waktu di Bandara Internasional Zainuddin Abdul Madjid (BIZAM) Lombok menuju hotel Anda.",
-    image: "/images/gallery-airport.png",
-    imageAlt: "Layanan Airport Transfer BIZAM Lombok Rental99",
-    points: [
-      "Penjemputan on-time di lobby kedatangan",
-      "Bebas repot bagasi dengan armada berkapasitas pas",
-      "Drop-off ke Mataram, Senggigi, Mandalika, Bangsal",
-    ],
+    id: "sasak-gili",
+    title: "Layanan Sasak Tour & Gili",
+    subtitle: "Eksplorasi Desa Adat Sade, Sirkuit Mandalika & island hopping 3 Gili.",
+    iconType: "palmtree",
+  },
+  {
+    id: "airport-harbor",
+    title: "Bandara & Pelabuhan",
+    subtitle: "Antar-jemput on-time Bandara BIZAM, Pelabuhan Lembar & Bangsal.",
     iconType: "plane",
   },
   {
-    title: "City Tour Lombok",
-    description: "Jelajahi keindahan budaya, kuliner ayam taliwang, Islamic Center, dan keindahan pesisir Mataram & Senggigi.",
-    image: "/images/gallery-interior.png",
-    imageAlt: "City Tour Lombok Rental99",
-    points: [
-      "Rute fleksibel menyesuaikan waktu Anda",
-      "Pusat oleh-oleh khas mutiara & tenun Lombok",
-      "Kunjungan spot kuliner legendaris terpercaya",
-    ],
-    iconType: "calendar",
-  },
-  {
-    title: "Sasak Tour & Gili",
-    description: "Paket perjalanan lengkap mengeksplorasi keaslian budaya suku Sasak, Sirkuit Mandalika, hingga island hopping 3 Gili.",
-    image: "/images/gallery-journey.png",
-    imageAlt: "Sasak Tour dan Gili Rental99",
-    points: [
-      "Kunjungan Desa Adat Sade & Sukarara",
-      "Sirkuit Internasional Mandalika & Bukit Merese",
-      "Private boat transfer ke Gili Trawangan, Meno, Air",
-    ],
-    iconType: "bus",
-  },
-  {
-    title: "Permintaan Luar Daerah / Kota",
-    description: "Layanan perjalanan lintas pulau dan kabupaten ke Sumbawa, Bima, Dompu, dan sekitarnya dengan unit prima.",
-    image: "/images/gallery-fleet.png",
-    imageAlt: "Layanan luar kota dan luar daerah Rental99",
-    points: [
-      "Siap rute jarak jauh lintas Pulau Sumbawa",
-      "Pengemudi berpengalaman jalan lintas provinsi",
-      "Tarif transparan include penyeberangan kapal ferry",
-    ],
-    iconType: "calendar",
+    id: "luar-daerah",
+    title: "Permintaan ke Luar Daerah/Kota",
+    subtitle: "Perjalanan dinas & wisata lintas pulau ke Sumbawa, Bima, dan sekitarnya.",
+    iconType: "map",
   },
 ];
 

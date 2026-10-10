@@ -26,8 +26,8 @@ export function Footer() {
             <h3 className="footer-heading">Menu</h3>
             <a href="#beranda">Beranda</a>
             <a href="#armada">Armada</a>
-            <a href="#tour">Paket Tour</a>
             <a href="#layanan">Layanan</a>
+            <a href="#tour">Paket Tour</a>
             <a href="#klien">Klien Kami</a>
             <a href="#faq">FAQ</a>
             <a href="#kontak">Kontak</a>
@@ -35,11 +35,10 @@ export function Footer() {
 
           <div className="footer-links">
             <h3 className="footer-heading">Layanan</h3>
-            <a href="#layanan">Rental Mobil + Driver</a>
-            <a href="#layanan">Airport Transfer BIZAM</a>
-            <a href="#layanan">City Tour Lombok</a>
-            <a href="#tour">Sasak Tour &amp; Gili</a>
-            <a href="#armada">Wisata Rombongan &amp; Bus</a>
+            <a href="#layanan">Layanan City Tour</a>
+            <a href="#layanan">Layanan Sasak Tour &amp; Gili</a>
+            <a href="#layanan">Bandara &amp; Pelabuhan</a>
+            <a href="#layanan">Permintaan ke Luar Daerah/Kota</a>
           </div>
 
           <div className="footer-contact">

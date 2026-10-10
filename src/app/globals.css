@@ -145,3 +145,30 @@
 .client-marquee-track:hover {
   animation-play-state: paused;
 }
+
+@keyframes clientMarqueeUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes clientMarqueeDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.client-marquee-up {
+  display: flex;
+  flex-direction: column;
+  animation: clientMarqueeUp 24s linear infinite;
+}
+
+.client-marquee-down {
+  display: flex;
+  flex-direction: column;
+  animation: clientMarqueeDown 24s linear infinite;
+}
+
+.client-marquee-up:hover,
+.client-marquee-down:hover {
+  animation-play-state: paused;
+}
