@@ -15,7 +15,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Toyota Innova Reborn",
     category: "MPV",
-    image: "/images/drivemate/car-reborn-lama.webp",
+    image: "/images/fleet/innova-reborn.png",
     transmission: "Matic",
     seats: "7 Kursi",
     price: 850000,
@@ -27,7 +27,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Toyota Alphard",
     category: "Luxury",
-    image: "/images/drivemate/car-alphard.png",
+    image: "/images/fleet/alphard.png",
     transmission: "Matic",
     seats: "7 Kursi (Captain Seat)",
     price: 3300000,
@@ -39,7 +39,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Toyota Avanza",
     category: "MPV",
-    image: "/images/drivemate/car-avanza.webp",
+    image: "/images/fleet/avanza.png",
     transmission: "Matic",
     seats: "7 Kursi",
     price: 650000,
@@ -51,7 +51,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Toyota Fortuner",
     category: "SUV",
-    image: "/images/drivemate/car-fortuner.jpeg",
+    image: "/images/fleet/fortuner.png",
     transmission: "Matic",
     seats: "7 Kursi",
     price: 1400000,
@@ -63,7 +63,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Toyota Hiace Commuter",
     category: "Minibus & Bus",
-    image: "/images/hiace.png",
+    image: "/images/fleet/hiace-commuter.png",
     transmission: "Manual",
     seats: "15 Kursi",
     price: 1200000,
@@ -75,7 +75,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Toyota Hiace Premio",
     category: "Minibus & Bus",
-    image: "/images/drivemate/car-premio.png",
+    image: "/images/fleet/hiace-premio.png",
     transmission: "Manual",
     seats: "12–14 Kursi",
     price: 1450000,
@@ -87,7 +87,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Mitsubishi Pajero Sport",
     category: "SUV",
-    image: "/images/drivemate/car-pajero.jpg",
+    image: "/images/fleet/pajero-sport.png",
     transmission: "Matic",
     seats: "7 Kursi",
     price: 1550000,
@@ -99,7 +99,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Honda Brio",
     category: "City Car",
-    image: "/images/drivemate/car-brio.webp",
+    image: "/images/fleet/brio.png",
     transmission: "Matic",
     seats: "5 Kursi",
     price: 550000,
@@ -111,7 +111,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Toyota Agya",
     category: "City Car",
-    image: "/images/ayla.png",
+    image: "/images/fleet/agya.png",
     transmission: "Matic",
     seats: "5 Kursi",
     price: 500000,
@@ -123,7 +123,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Isuzu Elf Long",
     category: "Minibus & Bus",
-    image: "/images/drivemate/car-elf.webp",
+    image: "/images/fleet/isuzu-elf.png",
     transmission: "Manual",
     seats: "17–19 Kursi",
     price: 1300000,
@@ -135,7 +135,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Medium Bus Pariwisata",
     category: "Minibus & Bus",
-    image: "/images/drivemate/car-medium-bus.webp",
+    image: "/images/fleet/medium-bus.png",
     transmission: "Manual",
     seats: "30–35 Kursi",
     price: 0,
@@ -147,7 +147,7 @@ export const FLEET_DATA: Car[] = [
   {
     name: "Big Bus Pariwisata",
     category: "Minibus & Bus",
-    image: "/images/drivemate/car-big-bus.webp",
+    image: "/images/fleet/big-bus.png",
     transmission: "Manual",
     seats: "45–50 Kursi",
     price: 0,

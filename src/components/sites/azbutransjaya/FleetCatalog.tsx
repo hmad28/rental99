@@ -82,20 +82,20 @@ export function FleetCatalog() {
 
             return (
               <Reveal key={car.name} delay={idx * 0.04}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-3 sm:p-4 shadow-xs transition duration-200 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
-                  {/* Dominant Vehicle Image with Subtle Gradient */}
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-[radial-gradient(circle_at_50%_40%,#EFF6FF_0%,#DBEAFE_60%,#BFDBFE_100%)] p-2">
+                <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-2.5 sm:p-4 shadow-xs transition duration-200 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+                  {/* Dominant Vehicle Image - Square 1:1 */}
+                  <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-slate-100">
                     <Image
                       src={car.image}
                       alt={car.name}
                       fill
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                      className="object-contain p-1 transition-transform duration-300 group-hover:scale-105"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
 
                     {/* Badge */}
                     {car.badge && (
-                      <span className="absolute left-2 top-2 rounded-md bg-[#2563EB] px-2 py-0.5 text-[9px] font-bold text-white shadow-xs">
+                      <span className="absolute left-2 top-2 z-10 rounded-md bg-[#2563EB]/95 px-2 py-0.5 text-[9px] font-bold text-white shadow-xs backdrop-blur-xs">
                         {car.badge}
                       </span>
                     )}
