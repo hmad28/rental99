@@ -52,7 +52,7 @@ export function Hero() {
             </span>
           </div>
           <p className="mobile-hero-desc">
-            Armada terawat untuk perjalanan harian, airport, wisata, dan kebutuhan keluarga.
+            Armada terawat untuk perjalanan harian, airport transfer, wisata, dan dinas keluarga bersama Rental99.
           </p>
           <div className="mobile-hero-actions">
             <a href="#armada" className="button-link button-primary mobile-hero-btn-primary">
@@ -94,7 +94,7 @@ export function Hero() {
           <div className="mobile-hero-fleet-wrap">
             <Image
               src="/images/hero-fleet-final.png"
-              alt="Toyota Innova Reborn, Suzuki XL7, dan Toyota Hiace Azbu Trans Jaya"
+              alt="Toyota Innova Reborn, Suzuki XL7, dan Toyota Hiace Rental99"
               fill
               sizes="(max-width: 767px) 120vw, 50vw"
               priority
@@ -113,7 +113,7 @@ export function Hero() {
             <span>Surabaya &amp; Sidoarjo</span>
           </h1>
           <p className="hero-description">
-            Perjalanan nyaman, aman, dan menyenangkan dengan armada terawat dan pelayanan profesional.
+            Perjalanan nyaman, aman, dan berkelas dengan armada terawat, driver profesional, dan tarif transparan bersama Rental99.
           </p>
 
           <div className="hero-actions">
@@ -151,7 +151,7 @@ export function Hero() {
         <motion.div className="hero-visual" {...animVisual}>
           <Image
             src="/images/hero-fleet-final.png"
-            alt="Toyota Innova Reborn, Suzuki XL7, dan Toyota Hiace"
+            alt="Armada Rental Mobil Rental99"
             fill
             sizes="(max-width: 767px) 100vw, 58vw"
             priority

@@ -46,9 +46,9 @@ export function QuickBookingPanel() {
   let driverTagText = "Tanpa Driver";
   if (selectedDriverId === "city") driverTagText = "Driver Dalam Kota";
   else if (selectedDriverId === "outOfCity") driverTagText = "Driver Luar Kota";
-  else if (selectedDriverId === "outOfRegion") driverTagText = "Driver Luar Daerah";
+  else if (selectedDriverId === "allIn") driverTagText = "Paket All-in (Include Driver + BBM)";
 
-  const customWaMessage = `Halo Kak, saya ingin rental ${selectedVehicle} dengan ${driverTagText} untuk area ${activeArea.label}. Bisa dibantu cek ketersediaan dan total biayanya?`;
+  const customWaMessage = `Halo Rental99, saya ingin rental ${selectedVehicle} dengan ${driverTagText} untuk area ${activeArea.label}. Bisa dibantu cek ketersediaan dan total biayanya?`;
 
   return (
     <section className="quick-booking-wrap" aria-label="Mulai perjalanan Anda">
@@ -205,7 +205,7 @@ export function QuickBookingPanel() {
               target="_blank"
               rel="noreferrer"
               className="quick-booking-action"
-              aria-label="Cek ketersediaan via WhatsApp"
+              aria-label="Cek ketersediaan via WhatsApp Rental99"
             >
               <MessageCircle size={18} />
               <span>Cek Ketersediaan</span>
@@ -214,7 +214,7 @@ export function QuickBookingPanel() {
 
           <div className="quick-booking-driver-note">
             <span className="driver-note-pill">
-              <strong>Tarif Driver:</strong> Dalam Kota Rp200.000 · Luar Kota Rp250.000 · Luar Daerah +Rp50.000–Rp100.000 (menyesuaikan tujuan)
+              <strong>Tarif Driver:</strong> Dalam Kota Rp200.000 · Luar Kota Rp250.000 · Paket All-in (Include Driver + BBM) Tersedia
             </span>
           </div>
         </Reveal>

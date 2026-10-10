@@ -9,19 +9,19 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Rental Mobil Surabaya & Sidoarjo | Azbu Trans Jaya",
+  title: "Rental Mobil Surabaya & Sidoarjo Terpercaya | Rental99",
   description:
-    "Azbu Trans Jaya menyediakan layanan rental mobil untuk kebutuhan perjalanan di Surabaya dan Sidoarjo dengan berbagai pilihan armada.",
-  metadataBase: new URL("https://azbutransjaya.com"),
+    "Rental99 menyediakan layanan rental mobil lepas kunci dan dengan driver profesional di Surabaya & Sidoarjo. Armada bersih, terawat, proses cepat, harga transparan.",
+  metadataBase: new URL("https://rental99.id"),
   alternates: {
-    canonical: "https://azbutransjaya.com",
+    canonical: "https://rental99.id",
   },
   openGraph: {
-    title: "Rental Mobil Surabaya & Sidoarjo | Azbu Trans Jaya",
+    title: "Rental Mobil Surabaya & Sidoarjo Terpercaya | Rental99",
     description:
-      "Rental mobil untuk kebutuhan perjalanan di Surabaya dan Sidoarjo dengan berbagai pilihan armada.",
-    url: "https://azbutransjaya.com",
-    siteName: "Azbu Trans Jaya",
+      "Rental99 menyediakan layanan rental mobil lepas kunci dan dengan driver profesional di Surabaya & Sidoarjo. Armada bersih, terawat, proses cepat, harga transparan.",
+    url: "https://rental99.id",
+    siteName: "Rental99",
     locale: "id_ID",
     type: "website",
     images: [
@@ -29,15 +29,15 @@ export const metadata: Metadata = {
         url: "/images/hero-fleet-final.png",
         width: 1536,
         height: 1024,
-        alt: "Azbu Trans Jaya Armada",
+        alt: "Rental99 Armada Surabaya & Sidoarjo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rental Mobil Surabaya & Sidoarjo | Azbu Trans Jaya",
+    title: "Rental Mobil Surabaya & Sidoarjo Terpercaya | Rental99",
     description:
-      "Rental mobil untuk kebutuhan perjalanan di Surabaya dan Sidoarjo dengan berbagai pilihan armada.",
+      "Rental99 menyediakan layanan rental mobil lepas kunci dan dengan driver profesional di Surabaya & Sidoarjo. Armada bersih, terawat, proses cepat, harga transparan.",
     images: ["/images/hero-fleet-final.png"],
   },
 };
@@ -46,22 +46,22 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "AutoRental",
-    name: "Azbu Trans Jaya",
-    legalName: "PT Azbu Trans Jaya",
-    url: "https://azbutransjaya.com",
-    telephone: "085655221633",
-    email: "azbutransjaya.com@gmail.com",
+    name: "Rental99",
+    legalName: "PT Rental 99 Indonesia",
+    url: "https://rental99.id",
+    telephone: "+6285655221633",
+    email: "info@rental99.id",
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "Jl. Raya Jaretan, Perum Sun Garden Blok A5/02, Urangagung, Sumberejo",
-      addressLocality: "Sidoarjo",
+        "Jl. Raya Darmo No. 99, Wonokromo",
+      addressLocality: "Surabaya",
       addressRegion: "Jawa Timur",
       addressCountry: "ID",
     },
-    areaServed: ["Surabaya", "Sidoarjo"],
+    areaServed: ["Surabaya", "Sidoarjo", "Juanda Airport", "Gresik", "Malang"],
     description:
-      "Azbu Trans Jaya menyediakan layanan rental mobil untuk kebutuhan perjalanan di Surabaya dan Sidoarjo dengan berbagai pilihan armada.",
+      "Rental99 menyediakan layanan rental mobil lepas kunci dan dengan driver profesional di Surabaya & Sidoarjo dengan berbagai pilihan armada terawat.",
   },
   {
     "@context": "https://schema.org",
@@ -72,7 +72,7 @@ const jsonLd = [
         name: "Apakah tersedia rental dengan driver?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ketersediaan layanan dengan driver perlu dikonfirmasi melalui WhatsApp sesuai jadwal dan kebutuhan perjalanan.",
+          text: "Ya, Rental99 menyediakan opsi lepas kunci maupun paket lengkap Include Driver + BBM untuk kenyamanan perjalanan tanpa repot.",
         },
       },
       {
@@ -80,31 +80,31 @@ const jsonLd = [
         name: "Apakah tersedia rental lepas kunci?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Kebijakan rental lepas kunci belum ditetapkan pada situs. Silakan hubungi Azbu Trans Jaya untuk informasi terbaru.",
+          text: "Tersedia untuk pelanggan yang memenuhi persyaratan verifikasi identitas (KTP, SIM A, dan dokumen pendukung). Hubungi WhatsApp kami untuk detail verifikasi.",
         },
       },
       {
         "@type": "Question",
-        name: "Apakah melayani perjalanan luar kota?",
+        name: "Apakah melayani perjalanan ke luar kota?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Tujuan perjalanan dan ketersediaan kendaraan perlu dikonsultasikan terlebih dahulu melalui WhatsApp.",
+          text: "Ya, kami melayani perjalanan dinas, wisata, dan keluarga ke berbagai kota di Jawa Timur maupun lintas provinsi dengan tarif transparan.",
         },
       },
       {
         "@type": "Question",
-        name: "Bagaimana proses booking kendaraan?",
+        name: "Bagaimana proses booking kendaraan di Rental99?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Pilih armada, hubungi kami, konfirmasi jadwal serta detail perjalanan, lalu tunggu konfirmasi pemesanan.",
+          text: "Sangat mudah: pilih unit kendaraan, tentukan tanggal serta layanan (lepas kunci atau dengan driver), lalu klik tombol WhatsApp untuk konfirmasi instan.",
         },
       },
       {
         "@type": "Question",
-        name: "Apa saja syarat pemesanan?",
+        name: "Apa saja syarat pemesanan rental mobil?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Persyaratan menyesuaikan jenis layanan dan kendaraan. Detail lengkap akan disampaikan saat konsultasi.",
+          text: "Untuk sewa dengan driver cukup menyertakan identitas dan jadwal. Untuk lepas kunci diperlukan verifikasi KTP, SIM A, serta deposit jaminan.",
         },
       },
       {
@@ -112,7 +112,7 @@ const jsonLd = [
         name: "Bagaimana metode pembayarannya?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Metode dan tahapan pembayaran perlu dikonfirmasi langsung karena informasi kebijakan belum tersedia pada situs.",
+          text: "Pembayaran dapat dilakukan melalui transfer bank resmi atau tunai setelah kesepakatan pemesanan dikonfirmasi oleh admin Rental99.",
         },
       },
     ],

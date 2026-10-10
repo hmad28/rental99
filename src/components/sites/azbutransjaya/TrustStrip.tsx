@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function TrustStrip() {
   return (
-    <section className="trust-strip-wrap" aria-label="Keunggulan Azbu Trans Jaya">
+    <section className="trust-strip-wrap" aria-label="Keunggulan Rental99">
       <div className="container-page">
         <Reveal className="trust-strip">
           <div>
@@ -17,7 +17,7 @@ export function TrustStrip() {
           <div>
             <MessageCircle size={23} />
             <span>
-              <strong>Konsultasi via WhatsApp</strong>
+              <strong>Konsultasi Cepat via WhatsApp</strong>
               <small>Kebutuhan perjalanan dibahas langsung agar pilihan kendaraan lebih sesuai.</small>
             </span>
           </div>
@@ -34,7 +34,7 @@ export function TrustStrip() {
             <MapPin size={23} />
             <span>
               <strong>Berbasis Surabaya &amp; Sidoarjo</strong>
-              <small>Detail titik jemput dan tujuan dikonfirmasi sesuai ketersediaan layanan.</small>
+              <small>Detail titik jemput dan tujuan dikonfirmasi tepat waktu &amp; fleksibel.</small>
             </span>
           </div>
         </Reveal>

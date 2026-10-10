@@ -5,6 +5,9 @@ export interface Car {
   transmission: "Automatic" | "Manual";
   seats: string;
   price: number;
+  allInPrice: number;
+  badge?: string;
+  features: string[];
 }
 
 export const FLEET_DATA: Car[] = [
@@ -13,64 +16,88 @@ export const FLEET_DATA: Car[] = [
     category: "City Car",
     image: "/images/sigra.png",
     transmission: "Automatic",
-    seats: "5–7 Seat",
+    seats: "5–7 Kursi",
     price: 325000,
+    allInPrice: 575000,
+    badge: "Best Seller",
+    features: ["Matic", "5–7 Kursi", "AC Dingin"],
   },
   {
     name: "Suzuki XL7 AT",
     category: "MPV",
     image: "/images/xl7.png",
     transmission: "Automatic",
-    seats: "7 Seat",
+    seats: "7 Kursi",
     price: 400000,
+    allInPrice: 650000,
+    badge: "Favorit Keluarga",
+    features: ["Matic", "7 Kursi", "AC Double"],
   },
   {
     name: "Daihatsu Xenia 2018 Manual",
     category: "MPV",
     image: "/images/xenia.png",
     transmission: "Manual",
-    seats: "7 Seat",
+    seats: "7 Kursi",
     price: 275000,
+    allInPrice: 525000,
+    badge: "Hemat & Irit",
+    features: ["Manual", "7 Kursi", "AC Dingin"],
   },
   {
     name: "Daihatsu Ayla AT",
     category: "City Car",
     image: "/images/ayla.png",
     transmission: "Automatic",
-    seats: "5 Seat",
+    seats: "5 Kursi",
     price: 275000,
+    allInPrice: 525000,
+    badge: "City Car",
+    features: ["Matic", "5 Kursi", "AC Dingin"],
   },
   {
     name: "Avanza Manual",
     category: "MPV",
     image: "/images/avanza.png",
     transmission: "Manual",
-    seats: "7 Seat",
+    seats: "7 Kursi",
     price: 300000,
+    allInPrice: 550000,
+    badge: "Paling Populer",
+    features: ["Manual", "7 Kursi", "AC Double"],
   },
   {
     name: "Daihatsu Sirion 2016 AT",
     category: "City Car",
     image: "/images/sirion.png",
     transmission: "Automatic",
-    seats: "5 Seat",
+    seats: "5 Kursi",
     price: 300000,
+    allInPrice: 550000,
+    badge: "Praktis & Nyaman",
+    features: ["Matic", "5 Kursi", "AC Dingin"],
   },
   {
     name: "Innova Reborn Automatic",
     category: "Premium",
     image: "/images/innova.png",
     transmission: "Automatic",
-    seats: "7 Seat",
+    seats: "7 Kursi",
     price: 600000,
+    allInPrice: 850000,
+    badge: "VIP Premium",
+    features: ["Matic", "7 Kursi", "Kabin Lega"],
   },
   {
-    name: "Hiace",
+    name: "Toyota Hiace Commuter",
     category: "Minibus",
     image: "/images/hiace.png",
     transmission: "Manual",
-    seats: "Rombongan",
+    seats: "14–16 Kursi",
     price: 1000000,
+    allInPrice: 1350000,
+    badge: "Wisata & Rombongan",
+    features: ["Manual", "Rombongan", "AC Full"],
   },
 ];
 
@@ -86,7 +113,7 @@ export const DRIVER_OPTIONS: DriverOption[] = [
   { id: "none", label: "Tanpa Driver (Lepas Kunci)", tag: "Tanpa Driver" },
   { id: "city", label: "Driver Dalam Kota (+Rp200.000)", tag: "Driver Dalam Kota" },
   { id: "outOfCity", label: "Driver Luar Kota (+Rp250.000)", tag: "Driver Luar Kota" },
-  { id: "outOfRegion", label: "Driver Luar Daerah (+Rp50rb–100rb, menyesuaikan tujuan)", tag: "Driver Luar Daerah" },
+  { id: "allIn", label: "Paket All-in (Include Driver + BBM)", tag: "Include Driver + BBM" },
 ];
 
 export interface AreaOption {
@@ -105,7 +132,7 @@ export const DRIVER_PRICING = {
   outOfCity: 250000,
   outOfRegionMin: 50000,
   outOfRegionMax: 100000,
-  outOfRegionNote: "Tambahan Rp50.000–Rp100.000, menyesuaikan tujuan.",
+  outOfRegionNote: "Paket All-in tersedia dengan Driver + BBM sesuai rute perjalanan.",
 };
 
 export const SERVICES_DATA = [
@@ -113,64 +140,64 @@ export const SERVICES_DATA = [
     title: "Rental Harian",
     description: "Kendaraan praktis untuk agenda personal, keluarga, atau aktivitas bisnis harian.",
     image: "/images/gallery-fleet.png",
-    imageAlt: "Visual representatif armada rental harian",
-    points: ["Pilihan unit sesuai kebutuhan", "Jadwal dikonfirmasi via WhatsApp"],
+    imageAlt: "Visual representatif armada rental harian Rental99",
+    points: ["Pilihan unit lepas kunci terawat", "Jadwal fleksibel dikonfirmasi via WhatsApp"],
     iconType: "calendar",
   },
   {
     title: "Rental + Driver",
     description: "Layanan sewa mobil dengan pengemudi profesional untuk perjalanan santai dan bebas lelah.",
     image: "/images/gallery-interior.png",
-    imageAlt: "Visual representatif layanan rental mobil dengan driver",
+    imageAlt: "Visual representatif layanan rental mobil dengan driver Rental99",
     points: [
       "Dalam Kota: Rp200.000 / hari",
       "Luar Kota: Rp250.000 / hari",
-      "Luar Daerah: +Rp50.000–Rp100.000 (sesuai tujuan)",
+      "Paket All-in: Include Driver + BBM tersedia",
     ],
     iconType: "user",
   },
   {
     title: "Antar Jemput & Airport",
-    description: "Perjalanan terjadwal untuk kebutuhan antar jemput dan transfer bandara.",
+    description: "Perjalanan terjadwal untuk kebutuhan antar jemput dan transfer bandara Juanda.",
     image: "/images/gallery-airport.png",
-    imageAlt: "Visual representatif layanan antar jemput bandara",
-    points: ["Detail titik jemput terkoordinasi", "Pilihan kendaraan menyesuaikan penumpang"],
+    imageAlt: "Visual representatif layanan antar jemput bandara Rental99",
+    points: ["Titik jemput on-time terkoordinasi", "Pilihan armada menyesuaikan kapasitas bagasi"],
     iconType: "plane",
   },
   {
     title: "Wisata & Rombongan",
-    description: "Pilihan perjalanan untuk keluarga, agenda luar kota, dan rombongan.",
+    description: "Pilihan perjalanan untuk keluarga, agenda luar kota, dan rombongan wisata.",
     image: "/images/gallery-journey.png",
-    imageAlt: "Visual representatif perjalanan wisata dan luar kota",
-    points: ["Tujuan dikonsultasikan terlebih dahulu", "Armada dipilih sesuai kebutuhan"],
+    imageAlt: "Visual representatif perjalanan wisata Rental99",
+    points: ["Rute dan destinasi dapat dikonsultasikan", "Armada minibus & MPV siap luar kota"],
     iconType: "bus",
   },
 ];
 
 export const FAQ_DATA = [
   {
-    question: "Apakah tersedia rental dengan driver?",
-    answer: "Ketersediaan layanan dengan driver perlu dikonfirmasi melalui WhatsApp sesuai jadwal dan kebutuhan perjalanan.",
+    question: "Apakah tersedia rental dengan driver dan BBM?",
+    answer: "Ya, Rental99 menyediakan opsi lepas kunci maupun paket lengkap Include Driver + BBM untuk kenyamanan perjalanan tanpa repot.",
   },
   {
     question: "Apakah tersedia rental lepas kunci?",
-    answer: "Kebijakan rental lepas kunci belum ditetapkan pada situs. Silakan hubungi Azbu Trans Jaya untuk informasi terbaru.",
+    answer: "Tersedia untuk pelanggan yang memenuhi persyaratan verifikasi identitas (KTP, SIM A, dan dokumen pendukung). Hubungi WhatsApp kami untuk detail verifikasi.",
   },
   {
-    question: "Apakah melayani perjalanan luar kota?",
-    answer: "Tujuan perjalanan dan ketersediaan kendaraan perlu dikonsultasikan terlebih dahulu melalui WhatsApp.",
+    question: "Apakah melayani perjalanan ke luar kota?",
+    answer: "Ya, kami melayani perjalanan dinas, wisata, dan keluarga ke berbagai kota di Jawa Timur maupun lintas provinsi dengan tarif transparan.",
   },
   {
-    question: "Bagaimana proses booking kendaraan?",
-    answer: "Pilih armada, hubungi kami, konfirmasi jadwal serta detail perjalanan, lalu tunggu konfirmasi pemesanan.",
+    question: "Bagaimana proses booking kendaraan di Rental99?",
+    answer: "Sangat mudah: pilih unit kendaraan, tentukan tanggal serta layanan (lepas kunci atau dengan driver), lalu klik tombol WhatsApp untuk konfirmasi instan.",
   },
   {
-    question: "Apa saja syarat pemesanan?",
-    answer: "Persyaratan menyesuaikan jenis layanan dan kendaraan. Detail lengkap akan disampaikan saat konsultasi.",
+    question: "Apa saja syarat pemesanan rental mobil?",
+    answer: "Untuk sewa dengan driver cukup menyertakan identitas dan jadwal. Untuk lepas kunci diperlukan verifikasi KTP, SIM A, serta deposit jaminan.",
   },
   {
     question: "Bagaimana metode pembayarannya?",
-    answer: "Metode dan tahapan pembayaran perlu dikonfirmasi langsung karena informasi kebijakan belum tersedia pada situs.",
+    answer: "Pembayaran dapat dilakukan melalui transfer bank resmi atau tunai setelah kesepakatan pemesanan dikonfirmasi oleh admin Rental99.",
   },
 ];
 
@@ -186,22 +213,22 @@ export const COVERAGE_PINS = [
 export const EXPERIENCE_ITEMS = [
   {
     title: "Armada Bersih & Terawat",
-    description: "Kondisi dan kebersihan kendaraan dipersiapkan sebelum jadwal keberangkatan.",
+    description: "Setiap kendaraan melalui inspeksi berkala dan pembersihan menyeluruh sebelum diserahkan.",
     iconType: "shield",
   },
   {
-    title: "Proses Booking Praktis",
-    description: "Sampaikan unit, tanggal, dan tujuan agar ketersediaan dapat segera dikonfirmasi.",
+    title: "Proses Booking Cepat 5 Menit",
+    description: "Konsultasi dan konfirmasi unit langsung via WhatsApp dengan respon cepat dan ramah.",
     iconType: "clipboard",
   },
   {
-    title: "Harga Transparan",
-    description: "Harga mulai ditampilkan di katalog dan detail akhir dikonfirmasi sesuai kebutuhan perjalanan.",
+    title: "Harga Jujur & Transparan",
+    description: "Tarif jelas tanpa biaya siluman. Pilihan lepas kunci maupun Include Driver + BBM tercantum transparan.",
     iconType: "check",
   },
   {
-    title: "Konsultasi via WhatsApp",
-    description: "Diskusikan kebutuhan perjalanan langsung bersama tim Azbu Trans Jaya.",
+    title: "Driver Berpengalaman & Ramah",
+    description: "Pengemudi profesional, paham rute jalan, dan mengutamakan keselamatan serta kenyamanan Anda.",
     iconType: "chat",
   },
 ];
@@ -210,36 +237,37 @@ export const BOOKING_STEPS = [
   {
     step: 1,
     title: "Pilih Unit",
-    description: "Pilih armada sesuai kebutuhan Anda.",
+    description: "Tentukan jenis mobil sesuai kebutuhan perjalanan Anda.",
     iconType: "car",
   },
   {
     step: 2,
-    title: "Kirim Tanggal & Tujuan",
-    description: "Kirim rencana perjalanan melalui WhatsApp.",
+    title: "Kirim Jadwal & Rute",
+    description: "Sampaikan tanggal sewa, tujuan, dan opsi driver via WhatsApp.",
     iconType: "calendar",
   },
   {
     step: 3,
     title: "Konfirmasi Ketersediaan",
-    description: "Kami cek unit dan detail perjalanan.",
+    description: "Admin kami segera memverifikasi ketersediaan armada dalam hitungan menit.",
     iconType: "clipboard",
   },
   {
     step: 4,
-    title: "Mobil Siap",
-    description: "Detail selesai, perjalanan siap dilakukan.",
+    title: "Mobil Siap Jalan",
+    description: "Armada siap diantarkan atau dijemput sesuai jadwal keberangkatan.",
     iconType: "check",
   },
 ];
 
+export const BRAND_NAME = "Rental99";
 export const PHONE_NUMBER = "085655221633";
-export const EMAIL_ADDRESS = "azbutransjaya.com@gmail.com";
+export const EMAIL_ADDRESS = "info@rental99.id";
 export const ADDRESS_TEXT = "Jl. Raya Jaretan, Perum Sun Garden Blok A5/02, Urangagung, Sumberejo, Sidoarjo, Jawa Timur";
 export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/o8b3UyufouA529XU7";
 
 export function whatsappUrl(message?: string): string {
-  const defaultMsg = "Halo Azbu Trans Jaya, saya melihat dari website dan ingin menanyakan ketersediaan rental mobil.";
+  const defaultMsg = "Halo Rental99, saya melihat dari website dan ingin menanyakan ketersediaan rental mobil.";
   const text = message || defaultMsg;
   const rawPhone = PHONE_NUMBER.replace(/\D/g, "");
   const phone = rawPhone.startsWith("0") ? `62${rawPhone.slice(1)}` : rawPhone;

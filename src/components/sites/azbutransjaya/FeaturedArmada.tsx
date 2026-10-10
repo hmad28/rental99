@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 import { whatsappUrl } from "./constants";
 
 export function FeaturedArmada() {
-  const customMsg = "Halo Azbu Trans Jaya, saya melihat dari website dan ingin menanyakan ketersediaan armada Innova Reborn CVT.";
+  const customMsg = "Halo Rental99, saya melihat dari website dan ingin menanyakan ketersediaan armada Innova Reborn CVT.";
 
   return (
     <section className="featured-section">
@@ -12,7 +12,7 @@ export function FeaturedArmada() {
         <Reveal className="featured-media">
           <Image
             src="/images/innova-dark.png"
-            alt="Toyota Innova Reborn CVT warna hitam"
+            alt="Toyota Innova Reborn CVT warna hitam Rental99"
             fill
             sizes="(max-width: 767px) 100vw, 50vw"
             className="featured-image"
@@ -23,7 +23,7 @@ export function FeaturedArmada() {
           <p className="featured-eyebrow">Premium Armada</p>
           <h2>Innova Reborn CVT</h2>
           <p className="featured-description">
-            Kabin lega dan nyaman untuk kebutuhan keluarga, perjalanan bisnis, maupun perjalanan luar kota.
+            Kabin lega dan nyaman untuk kebutuhan keluarga, perjalanan dinas bisnis, maupun perjalanan luar kota bersama Rental99.
           </p>
 
           <div className="featured-specs">

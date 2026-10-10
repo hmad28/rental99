@@ -10,7 +10,7 @@ export function CoverageArea() {
         <Reveal className="coverage-map">
           <Image
             src="/images/service-map-v2.png"
-            alt="Peta area layanan Azbu Trans Jaya"
+            alt="Peta area layanan Rental99"
             fill
             sizes="(max-width: 767px) 100vw, 45vw"
           />
@@ -25,10 +25,10 @@ export function CoverageArea() {
         </Reveal>
 
         <Reveal className="coverage-copy" delay={0.1}>
-          <p className="section-kicker">Area layanan Azbu</p>
+          <p className="section-kicker">Area layanan Rental99</p>
           <h2>Rental Mobil Surabaya untuk Perjalanan yang Fleksibel</h2>
           <p>
-            Detail titik jemput dan tujuan dibahas terlebih dahulu agar kendaraan yang dipilih sesuai kebutuhan perjalanan Anda.
+            Detail titik jemput dan rute tujuan dikoordinasikan secara profesional agar armada pilihan siap mengantar perjalanan Anda dengan tepat waktu.
           </p>
 
           <div className="coverage-list">
@@ -41,7 +41,7 @@ export function CoverageArea() {
           </div>
 
           <a href={whatsappUrl()} target="_blank" rel="noreferrer" className="coverage-cta">
-            Hubungi Azbu Trans Jaya <ArrowRight size={17} />
+            Hubungi Rental99 <ArrowRight size={17} />
           </a>
         </Reveal>
       </div>

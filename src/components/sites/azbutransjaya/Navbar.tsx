@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { CalendarDays, Menu, X } from "lucide-react";
 import { whatsappUrl } from "./constants";
+import { Rental99Logo } from "./Rental99Logo";
 
 const NAV_ITEMS = [
   { label: "Beranda", href: "#beranda", id: "beranda" },
@@ -45,15 +45,8 @@ export function Navbar() {
   return (
     <header className="site-header">
       <div className="container-page nav-inner">
-        <a href="#beranda" className="brand-link" aria-label="Azbu Trans Jaya - Beranda">
-          <Image
-            src="/images/azbu-logo.png"
-            alt="Azbu Trans Jaya"
-            width={260}
-            height={104}
-            priority
-            className="brand-logo"
-          />
+        <a href="#beranda" className="brand-link" aria-label="Rental99 - Beranda">
+          <Rental99Logo variant="dark" />
         </a>
 
         <nav className="desktop-nav" aria-label="Navigasi utama">

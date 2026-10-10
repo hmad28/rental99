@@ -11,7 +11,7 @@ export function CtaBanner() {
           <div className="cta-copy">
             <p className="section-kicker">Mulai perjalanan Anda</p>
             <h2>Siap untuk perjalanan Anda?</h2>
-            <p>Sampaikan tanggal, tujuan, dan kendaraan yang Anda butuhkan.</p>
+            <p>Sampaikan tanggal, tujuan, dan armada yang Anda butuhkan ke tim Rental99.</p>
             <a
               href={whatsappUrl()}
               target="_blank"
@@ -26,7 +26,7 @@ export function CtaBanner() {
           <div className="cta-vehicle" aria-hidden="true">
             <Image
               src="/images/hero-fleet-final.png"
-              alt=""
+              alt="Armada Rental99"
               fill
               sizes="(max-width: 767px) 100vw, 48vw"
             />

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { MapPin, Phone, MessageCircle, Mail } from "lucide-react";
 import {
   PHONE_NUMBER,
@@ -7,6 +6,7 @@ import {
   GOOGLE_MAPS_URL,
   whatsappUrl,
 } from "./constants";
+import { Rental99Logo } from "./Rental99Logo";
 
 export function Footer() {
   return (
@@ -15,16 +15,10 @@ export function Footer() {
         <div className="container-page footer-grid">
           <div className="footer-brand">
             <div className="footer-logo-wrap">
-              <Image
-                src="/images/azbu-logo.png"
-                alt="Azbu Trans Jaya"
-                width={250}
-                height={100}
-                className="footer-logo"
-              />
+              <Rental99Logo variant="light" />
             </div>
             <p>
-              Azbu Trans Jaya menyediakan layanan rental mobil untuk berbagai kebutuhan perjalanan di Surabaya dan Sidoarjo.
+              Rental99 menyediakan layanan rental mobil terpercaya untuk kebutuhan pribadi, dinas bisnis, airport transfer Juanda, dan wisata di Surabaya &amp; Sidoarjo.
             </p>
           </div>
 
@@ -80,7 +74,7 @@ export function Footer() {
         </div>
 
         <div className="container-page footer-bottom">
-          <p>© 2026 Azbu Trans Jaya. All rights reserved.</p>
+          <p>© 2026 Rental99. All rights reserved.</p>
         </div>
       </footer>
 
@@ -90,7 +84,7 @@ export function Footer() {
         target="_blank"
         rel="noreferrer"
         className="mobile-whatsapp"
-        aria-label="Chat WhatsApp Azbu Trans Jaya"
+        aria-label="Chat WhatsApp Rental99"
       >
         <MessageCircle size={20} />
         <span>WhatsApp</span>

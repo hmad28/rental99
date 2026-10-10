@@ -57,7 +57,7 @@ export function FAQ() {
         <Reveal className="center-heading faq-heading">
           <p className="section-kicker">Pertanyaan umum</p>
           <h2>Pertanyaan yang Sering Diajukan</h2>
-          <p>Jawaban umum sebelum Anda menghubungi tim Azbu Trans Jaya.</p>
+          <p>Jawaban umum seputar layanan, syarat sewa, dan pemesanan di Rental99.</p>
         </Reveal>
 
         <div className="faq-grid">
