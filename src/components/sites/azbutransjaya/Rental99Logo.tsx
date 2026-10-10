@@ -6,9 +6,7 @@ interface Rental99LogoProps {
   variant?: "light" | "dark";
 }
 
-export function Rental99Logo({ className = "", variant = "dark" }: Rental99LogoProps) {
-  const isLight = variant === "light";
-
+export function Rental99Logo({ className = "" }: Rental99LogoProps) {
   return (
     <div className={`flex items-center select-none ${className}`}>
       <Image
@@ -17,9 +15,7 @@ export function Rental99Logo({ className = "", variant = "dark" }: Rental99LogoP
         width={195}
         height={52}
         priority
-        className={`h-10 w-auto object-contain ${
-          isLight ? "brightness-0 invert drop-shadow-sm" : ""
-        }`}
+        className="h-10 w-auto object-contain"
       />
     </div>
   );

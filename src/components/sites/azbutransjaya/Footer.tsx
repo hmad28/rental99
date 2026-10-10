@@ -14,8 +14,8 @@ export function Footer() {
       <footer className="site-footer">
         <div className="container-page footer-grid">
           <div className="footer-brand">
-            <div className="footer-logo-wrap">
-              <Rental99Logo variant="light" />
+            <div className="inline-flex items-center rounded-xl bg-white px-3.5 py-2 shadow-xs">
+              <Rental99Logo />
             </div>
             <p>
               Rental99 Transport Service &amp; Tours menyediakan layanan rental mobil include driver, BBM, dan air mineral untuk kebutuhan dinas bisnis, liburan keluarga, airport transfer BIZAM Lombok, dan paket wisata Lombok &amp; Gili.
