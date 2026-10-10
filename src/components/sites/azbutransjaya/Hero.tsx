@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CarFront, MessageCircle, ShieldCheck, MapPin, Award } from "lucide-react";
+import { CarFront, MessageCircle, ShieldCheck, MapPin, Award, ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { whatsappUrl } from "./constants";
 
@@ -97,10 +97,10 @@ export function Hero() {
 
       {/* =========================================
           MOBILE HERO VIEW (block md:hidden)
-          Background: hero-bg-mobile.png
+          Redesigned: Clean, Premium, Minimal UI
           ========================================= */}
-      <div className="block md:hidden relative min-h-[720px] sm:min-h-[800px] w-full overflow-hidden">
-        {/* Mobile Background Image */}
+      <div className="block md:hidden relative min-h-[660px] sm:min-h-[720px] w-full overflow-hidden">
+        {/* Mobile Background Image (Full visual) */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <Image
             src="/images/hero-bg-mobile.png"
@@ -108,70 +108,66 @@ export function Hero() {
             fill
             sizes="100vw"
             priority
-            className="object-cover object-center"
+            className="object-cover object-bottom"
           />
         </div>
 
+        {/* Soft white-to-transparent gradient overlay behind text area only (upper 50%) */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-[52%] bg-gradient-to-b from-white/95 via-white/80 to-transparent"
+          aria-hidden="true"
+        />
+
         {/* Mobile Hero Content Overlay */}
-        <div className="relative z-10 px-5 pt-8 pb-10 flex flex-col justify-between min-h-[720px] sm:min-h-[800px]">
-          <div>
-            {/* Eyebrow */}
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[#2563EB]">
-              Transport Service &amp; Tours • BIZAM Lombok
+        <div className="relative z-10 px-5 pt-7 pb-8 flex flex-col justify-between min-h-[660px] sm:min-h-[720px]">
+          {/* Upper 45–50%: Minimal, Premium Text Block */}
+          <div className="max-w-[320px]">
+            {/* Small Eyebrow Text */}
+            <p className="text-[10.5px] font-bold uppercase tracking-[0.14em] text-[#2563EB]">
+              Rental99 • BIZAM Lombok
             </p>
 
-            {/* Title */}
-            <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] leading-tight">
+            {/* Strong, Tighter Headline */}
+            <h1 className="mt-1.5 text-[27px] sm:text-[31px] font-extrabold tracking-tight text-[#0F172A] leading-[1.12]">
               Rental Mobil &amp; Tour
-              <span className="block text-[#2563EB]">Lombok BIZAM</span>
+              <span className="block text-[#2563EB]">BIZAM Lombok</span>
             </h1>
 
-            {/* Description */}
-            <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-sm">
-              Transportasi terpercaya sejak tahun 2012. 12 armada prima lengkap{" "}
-              <strong className="text-slate-900">Include Driver + BBM + Mineral</strong>.
+            {/* Short Supporting Sentence */}
+            <p className="mt-2 text-xs text-slate-600 leading-relaxed font-normal">
+              Armada terawat lengkap include driver, BBM &amp; mineral siap di Bandara BIZAM.
             </p>
 
-            {/* Action Buttons */}
-            <div className="mt-5 flex flex-col gap-2.5 max-w-xs">
+            {/* One Primary WhatsApp CTA + One Secondary "Lihat Armada" Text Link */}
+            <div className="mt-4 flex items-center gap-4">
               <a
                 href={whatsappUrl()}
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#2563EB] text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-600/30 transition hover:bg-[#1D4ED8]"
+                className="inline-flex h-10 items-center justify-center gap-1.5 rounded-xl bg-[#2563EB] px-4 text-xs font-bold text-white shadow-md shadow-blue-600/25 transition active:scale-[0.98]"
               >
-                <MessageCircle className="size-4" />
-                <span>Booking via WhatsApp</span>
+                <MessageCircle className="size-3.5" />
+                <span>Booking via WA</span>
               </a>
 
               <a
                 href="#armada"
-                className="flex h-11 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white/95 text-xs sm:text-sm font-bold text-[#0F172A] shadow-xs backdrop-blur-xs transition hover:bg-white"
+                className="inline-flex items-center gap-1 text-xs font-bold text-[#0F172A] hover:text-[#2563EB] transition py-1"
               >
-                <CarFront className="size-4" />
                 <span>Lihat Armada</span>
+                <ArrowRight className="size-3 text-[#2563EB]" />
               </a>
             </div>
 
-            {/* Trust Chips */}
-            <div className="mt-4 flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-700">
-              <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/90 px-2.5 py-1 shadow-2xs backdrop-blur-xs">
-                <ShieldCheck className="size-3 text-[#2563EB]" />
-                Include Driver + BBM
-              </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/90 px-2.5 py-1 shadow-2xs backdrop-blur-xs">
-                <Award className="size-3 text-[#2563EB]" />
-                Sejak Tahun 2012
-              </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/90 px-2.5 py-1 shadow-2xs backdrop-blur-xs">
-                <MapPin className="size-3 text-[#2563EB]" />
-                Standby BIZAM
-              </span>
+            {/* Compact Trust Line */}
+            <div className="mt-3.5 flex items-center gap-1.5 text-[10.5px] font-medium text-slate-500">
+              <span className="size-1.5 rounded-full bg-emerald-500 shrink-0" />
+              <span>Driver + BBM • Air Mineral • Sejak 2012</span>
             </div>
           </div>
 
-          {/* Bottom space leaves the integrated vehicles & scenery fully visible */}
-          <div className="h-44 sm:h-56" aria-hidden="true" />
+          {/* Lower 50–55%: Unobstructed Vehicle Fleet & Lombok Scenery Visual Space */}
+          <div className="h-[320px] sm:h-[370px]" aria-hidden="true" />
         </div>
       </div>
     </section>
