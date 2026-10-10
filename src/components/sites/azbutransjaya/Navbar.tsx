@@ -8,8 +8,10 @@ import { Rental99Logo } from "./Rental99Logo";
 const NAV_ITEMS = [
   { label: "Beranda", href: "#beranda", id: "beranda" },
   { label: "Armada", href: "#armada", id: "armada" },
+  { label: "Paket Tour", href: "#tour", id: "tour" },
   { label: "Layanan", href: "#layanan", id: "layanan" },
-  { label: "Tentang", href: "#tentang", id: "tentang" },
+  { label: "Klien", href: "#klien", id: "klien" },
+  { label: "FAQ", href: "#faq", id: "faq" },
   { label: "Kontak", href: "#kontak", id: "kontak" },
 ];
 
@@ -19,7 +21,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sectionIds = ["beranda", "armada", "layanan", "tentang", "kontak"];
+      const sectionIds = ["beranda", "armada", "tour", "layanan", "klien", "faq", "kontak"];
       const scrollPos = window.scrollY + 140;
 
       for (let i = sectionIds.length - 1; i >= 0; i--) {

@@ -3,9 +3,10 @@ import { Hero } from "@/components/sites/azbutransjaya/Hero";
 import { QuickBookingPanel } from "@/components/sites/azbutransjaya/QuickBookingPanel";
 import { TrustStrip } from "@/components/sites/azbutransjaya/TrustStrip";
 import { FleetCatalog } from "@/components/sites/azbutransjaya/FleetCatalog";
+import { TourPackages } from "@/components/sites/azbutransjaya/TourPackages";
 import { Services } from "@/components/sites/azbutransjaya/Services";
 import { FeaturedArmada } from "@/components/sites/azbutransjaya/FeaturedArmada";
-import { CoverageArea } from "@/components/sites/azbutransjaya/CoverageArea";
+import { ClientsSection } from "@/components/sites/azbutransjaya/ClientsSection";
 import { Experience } from "@/components/sites/azbutransjaya/Experience";
 import { BookingFlow } from "@/components/sites/azbutransjaya/BookingFlow";
 import { FAQ } from "@/components/sites/azbutransjaya/FAQ";
@@ -21,9 +22,10 @@ export default function Home() {
         <QuickBookingPanel />
         <TrustStrip />
         <FleetCatalog />
+        <TourPackages />
         <Services />
         <FeaturedArmada />
-        <CoverageArea />
+        <ClientsSection />
         <Experience />
         <BookingFlow />
         <FAQ />

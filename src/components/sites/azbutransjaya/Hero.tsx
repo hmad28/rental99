@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CarFront, MessageCircle, ShieldCheck, MapPin } from "lucide-react";
+import { CarFront, MessageCircle, ShieldCheck, MapPin, Award } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { whatsappUrl } from "./constants";
 
@@ -30,34 +30,30 @@ export function Hero() {
       <div className="mobile-hero-container">
         <div className="mobile-hero-bg-layer" aria-hidden="true">
           <Image
-            src="/images/hero-bg-surabaya-mobile.png"
-            alt="Surabaya Landmark Background"
+            src="/images/drivemate/city-bg.jpg"
+            alt="Lombok Landmark Background"
             fill
             sizes="100vw"
             priority
-            className="mobile-hero-bg-img"
+            className="mobile-hero-bg-img opacity-25"
           />
           <div className="mobile-hero-gradient-scrim" />
         </div>
 
         <div className="mobile-hero-content">
-          <p className="mobile-hero-eyebrow">Rental Mobil Surabaya &amp; Sidoarjo</p>
+          <p className="mobile-hero-eyebrow">Transport Service &amp; Tours • BIZAM Lombok</p>
           <div className="mobile-hero-title" role="heading" aria-level={1}>
-            Rental Mobil
+            Rental Mobil &amp; Tour
             <br />
-            <span>
-              Surabaya &amp;
-              <br />
-              Sidoarjo
-            </span>
+            <span>Lombok BIZAM</span>
           </div>
           <p className="mobile-hero-desc">
-            Armada terawat untuk perjalanan harian, airport transfer, wisata, dan dinas keluarga bersama Rental99.
+            Transportasi terpercaya sejak tahun 2012. 12 pilihan armada terawat lengkap <strong>Include Driver + BBM + Air Mineral</strong>.
           </p>
           <div className="mobile-hero-actions">
             <a href="#armada" className="button-link button-primary mobile-hero-btn-primary">
               <CarFront size={18} />
-              <span>Lihat Armada</span>
+              <span>Lihat 12 Armada</span>
             </a>
             <a
               href={whatsappUrl()}
@@ -73,15 +69,15 @@ export function Hero() {
           <div className="mobile-hero-trust-chips">
             <span className="mobile-trust-chip">
               <ShieldCheck size={13} className="mobile-trust-icon" />
-              Armada Terawat
+              Include Driver + BBM + Mineral
             </span>
             <span className="mobile-trust-chip">
-              <CarFront size={13} className="mobile-trust-icon" />
-              Pilihan Lengkap
+              <Award size={13} className="mobile-trust-icon" />
+              Terpercaya Sejak 2012
             </span>
             <span className="mobile-trust-chip">
               <MapPin size={13} className="mobile-trust-icon" />
-              Siap Surabaya &amp; Sidoarjo
+              Standby BIZAM Lombok
             </span>
           </div>
         </div>
@@ -94,7 +90,7 @@ export function Hero() {
           <div className="mobile-hero-fleet-wrap">
             <Image
               src="/images/hero-fleet-final.png"
-              alt="Toyota Innova Reborn, Suzuki XL7, dan Toyota Hiace Rental99"
+              alt="Armada Rental99 Lombok"
               fill
               sizes="(max-width: 767px) 120vw, 50vw"
               priority
@@ -107,19 +103,19 @@ export function Hero() {
       {/* Desktop Hero View */}
       <div className="container-page hero-grid desktop-hero-grid">
         <motion.div className="hero-copy" {...animFadeUp}>
-          <p className="hero-eyebrow">Rental Mobil Surabaya &amp; Sidoarjo</p>
+          <p className="hero-eyebrow">Rental99 • Transport Service &amp; Tours</p>
           <h1>
-            Rental Mobil
-            <span>Surabaya &amp; Sidoarjo</span>
+            Rental Mobil &amp; Tour
+            <span>BIZAM Lombok</span>
           </h1>
           <p className="hero-description">
-            Perjalanan nyaman, aman, dan berkelas dengan armada terawat, driver profesional, dan tarif transparan bersama Rental99.
+            Transportasi terpercaya sejak tahun 2012 di Lombok. Menyediakan 12 unit armada prima lengkap <strong>Include Driver + BBM + Air Mineral</strong> untuk airport transfer BIZAM, city tour, Sasak &amp; Gili, hingga perjalanan luar daerah.
           </p>
 
           <div className="hero-actions">
             <a href="#armada" className="button-link button-primary">
               <CarFront size={18} />
-              <span>Lihat Armada</span>
+              <span>Lihat 12 Armada</span>
             </a>
             <a
               href={whatsappUrl()}
@@ -135,15 +131,15 @@ export function Hero() {
           <div className="hero-trust">
             <span>
               <ShieldCheck size={16} />
-              Armada Terawat
+              Include Driver + BBM + Mineral
             </span>
             <span>
-              <CarFront size={16} />
-              Pilihan Mobil Lengkap
+              <Award size={16} />
+              Terpercaya Sejak 2012
             </span>
             <span>
               <MapPin size={16} />
-              Siap Surabaya &amp; Sidoarjo
+              Standby di BIZAM Lombok
             </span>
           </div>
         </motion.div>
@@ -151,7 +147,7 @@ export function Hero() {
         <motion.div className="hero-visual" {...animVisual}>
           <Image
             src="/images/hero-fleet-final.png"
-            alt="Armada Rental Mobil Rental99"
+            alt="Armada Rental Mobil Rental99 BIZAM Lombok"
             fill
             sizes="(max-width: 767px) 100vw, 58vw"
             priority

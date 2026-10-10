@@ -9,19 +9,24 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Rental Mobil Surabaya & Sidoarjo Terpercaya | Rental99",
+  title: "Rental Mobil & Tour BIZAM Lombok | Rental99 Transport Service & Tours",
   description:
-    "Rental99 menyediakan layanan rental mobil lepas kunci dan dengan driver profesional di Surabaya & Sidoarjo. Armada bersih, terawat, proses cepat, harga transparan.",
+    "Rental99 Transport Service & Tours menyediakan layanan rental mobil include driver, BBM, dan air mineral di BIZAM Lombok, airport transfer, city tour, dan paket wisata Sasak & Gili.",
   metadataBase: new URL("https://rental99.id"),
   alternates: {
     canonical: "https://rental99.id",
   },
+  icons: {
+    icon: "/images/rental99-icon.png",
+    shortcut: "/images/rental99-icon.png",
+    apple: "/images/rental99-icon.png",
+  },
   openGraph: {
-    title: "Rental Mobil Surabaya & Sidoarjo Terpercaya | Rental99",
+    title: "Rental Mobil & Tour BIZAM Lombok | Rental99 Transport Service & Tours",
     description:
-      "Rental99 menyediakan layanan rental mobil lepas kunci dan dengan driver profesional di Surabaya & Sidoarjo. Armada bersih, terawat, proses cepat, harga transparan.",
+      "Rental99 Transport Service & Tours menyediakan layanan rental mobil include driver, BBM, dan air mineral di BIZAM Lombok, airport transfer, city tour, dan paket wisata Sasak & Gili.",
     url: "https://rental99.id",
-    siteName: "Rental99",
+    siteName: "Rental99 Transport Service & Tours",
     locale: "id_ID",
     type: "website",
     images: [
@@ -29,15 +34,15 @@ export const metadata: Metadata = {
         url: "/images/hero-fleet-final.png",
         width: 1536,
         height: 1024,
-        alt: "Rental99 Armada Surabaya & Sidoarjo",
+        alt: "Rental99 Armada & Tour BIZAM Lombok",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rental Mobil Surabaya & Sidoarjo Terpercaya | Rental99",
+    title: "Rental Mobil & Tour BIZAM Lombok | Rental99 Transport Service & Tours",
     description:
-      "Rental99 menyediakan layanan rental mobil lepas kunci dan dengan driver profesional di Surabaya & Sidoarjo. Armada bersih, terawat, proses cepat, harga transparan.",
+      "Rental99 Transport Service & Tours menyediakan layanan rental mobil include driver, BBM, dan air mineral di BIZAM Lombok, airport transfer, city tour, dan paket wisata Sasak & Gili.",
     images: ["/images/hero-fleet-final.png"],
   },
 };
@@ -47,21 +52,21 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "AutoRental",
     name: "Rental99",
-    legalName: "PT Rental 99 Indonesia",
+    legalName: "Rental99 Transport Service & Tours",
     url: "https://rental99.id",
     telephone: "+6285655221633",
     email: "info@rental99.id",
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "Jl. Raya Darmo No. 99, Wonokromo",
-      addressLocality: "Surabaya",
-      addressRegion: "Jawa Timur",
+        "Area Bandara Internasional Zainuddin Abdul Madjid (BIZAM), Praya",
+      addressLocality: "Lombok Tengah",
+      addressRegion: "Nusa Tenggara Barat",
       addressCountry: "ID",
     },
-    areaServed: ["Surabaya", "Sidoarjo", "Juanda Airport", "Gresik", "Malang"],
+    areaServed: ["BIZAM Lombok", "Mataram", "Senggigi", "Kuta Mandalika", "Gili Trawangan", "Sembalun", "Sumbawa"],
     description:
-      "Rental99 menyediakan layanan rental mobil lepas kunci dan dengan driver profesional di Surabaya & Sidoarjo dengan berbagai pilihan armada terawat.",
+      "Rental99 Transport Service & Tours menyediakan layanan rental mobil include driver, BBM, dan air mineral di BIZAM Lombok, airport transfer, city tour, dan paket wisata Sasak & Gili.",
   },
   {
     "@context": "https://schema.org",
@@ -69,50 +74,50 @@ const jsonLd = [
     mainEntity: [
       {
         "@type": "Question",
-        name: "Apakah tersedia rental dengan driver?",
+        name: "Apakah tarif rental sudah termasuk Driver dan BBM?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ya, Rental99 menyediakan opsi lepas kunci maupun paket lengkap Include Driver + BBM untuk kenyamanan perjalanan tanpa repot.",
+          text: "Ya, seluruh armada Rental99 sudah termasuk Driver profesional, BBM, dan Air Mineral gratis selama perjalanan. Anda tinggal duduk santai menikmati perjalanan di Lombok.",
         },
       },
       {
         "@type": "Question",
-        name: "Apakah tersedia rental lepas kunci?",
+        name: "Apakah melayani penjemputan langsung di Bandara BIZAM Lombok?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Tersedia untuk pelanggan yang memenuhi persyaratan verifikasi identitas (KTP, SIM A, dan dokumen pendukung). Hubungi WhatsApp kami untuk detail verifikasi.",
+          text: "Tentu saja. BIZAM (Bandara Internasional Zainuddin Abdul Madjid) adalah area layanan utama kami. Driver kami akan standby menyambut kedatangan Anda tepat waktu.",
         },
       },
       {
         "@type": "Question",
-        name: "Apakah melayani perjalanan ke luar kota?",
+        name: "Bagaimana cara pemesanan Big Bus atau Medium Bus?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ya, kami melayani perjalanan dinas, wisata, dan keluarga ke berbagai kota di Jawa Timur maupun lintas provinsi dengan tarif transparan.",
+          text: "Untuk armada Medium Bus (30-35 seat) dan Big Bus (45-50 seat), pemesanan dan penawaran harga khusus dapat langsung dikonsultasikan melalui WhatsApp kami sesuai durasi dan rute perjalanan.",
         },
       },
       {
         "@type": "Question",
-        name: "Bagaimana proses booking kendaraan di Rental99?",
+        name: "Apakah tersedia paket tour kustom (custom itinerary)?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sangat mudah: pilih unit kendaraan, tentukan tanggal serta layanan (lepas kunci atau dengan driver), lalu klik tombol WhatsApp untuk konfirmasi instan.",
+          text: "Sangat bisa. Anda dapat mengkombinasikan destinasi sesuai keinginan, misalnya Sasak Tour + Sunset Mandalika, atau Snorkeling 3 Gili + Sembalun.",
         },
       },
       {
         "@type": "Question",
-        name: "Apa saja syarat pemesanan rental mobil?",
+        name: "Apakah melayani perjalanan luar daerah seperti Sumbawa?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Untuk sewa dengan driver cukup menyertakan identitas dan jadwal. Untuk lepas kunci diperlukan verifikasi KTP, SIM A, serta deposit jaminan.",
+          text: "Ya, kami melayani perjalanan dinas maupun wisata lintas daerah ke Pulau Sumbawa, Bima, dan sekitarnya dengan konfirmasi jadwal terlebih dahulu.",
         },
       },
       {
         "@type": "Question",
-        name: "Bagaimana metode pembayarannya?",
+        name: "Bagaimana proses pembayaran booking di Rental99?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Pembayaran dapat dilakukan melalui transfer bank resmi atau tunai setelah kesepakatan pemesanan dikonfirmasi oleh admin Rental99.",
+          text: "Pemesanan dapat didiskusikan terlebih dahulu melalui WhatsApp. Setelah draft jadwal dan armada disepakati, pembayaran dapat diselesaikan dengan aman.",
         },
       },
     ],

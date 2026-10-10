@@ -1,4 +1,4 @@
-import { ShieldCheck, ClipboardCheck, CircleCheck, MessageCircle } from "lucide-react";
+import { ShieldCheck, Clock, Headphones, Car } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { EXPERIENCE_ITEMS } from "./constants";
 
@@ -7,12 +7,12 @@ export function Experience() {
     switch (type) {
       case "shield":
         return <ShieldCheck size={34} strokeWidth={1.7} />;
-      case "clipboard":
-        return <ClipboardCheck size={34} strokeWidth={1.7} />;
-      case "check":
-        return <CircleCheck size={34} strokeWidth={1.7} />;
-      case "chat":
-        return <MessageCircle size={34} strokeWidth={1.7} />;
+      case "clock":
+        return <Clock size={34} strokeWidth={1.7} />;
+      case "headset":
+        return <Headphones size={34} strokeWidth={1.7} />;
+      case "car":
+        return <Car size={34} strokeWidth={1.7} />;
       default:
         return <ShieldCheck size={34} strokeWidth={1.7} />;
     }

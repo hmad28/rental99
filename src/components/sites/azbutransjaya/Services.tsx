@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CalendarDays, UserCheck, Plane, BusFront, CircleCheck } from "lucide-react";
+import { CalendarDays, UserCheck, Plane, BusFront, Compass, CircleCheck } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SERVICES_DATA } from "./constants";
 
@@ -7,15 +7,15 @@ export function Services() {
   const getIcon = (type: string) => {
     switch (type) {
       case "calendar":
-        return <CalendarDays size={30} strokeWidth={1.7} />;
+        return <CalendarDays size={28} strokeWidth={1.8} />;
       case "user":
-        return <UserCheck size={30} strokeWidth={1.7} />;
+        return <UserCheck size={28} strokeWidth={1.8} />;
       case "plane":
-        return <Plane size={30} strokeWidth={1.7} />;
+        return <Plane size={28} strokeWidth={1.8} />;
       case "bus":
-        return <BusFront size={30} strokeWidth={1.7} />;
+        return <BusFront size={28} strokeWidth={1.8} />;
       default:
-        return <CalendarDays size={30} strokeWidth={1.7} />;
+        return <Compass size={28} strokeWidth={1.8} />;
     }
   };
 
@@ -23,18 +23,18 @@ export function Services() {
     <section id="layanan" className="services-section">
       <div className="container-page">
         <Reveal className="center-heading services-heading">
-          <p className="section-kicker">Pilihan Layanan</p>
+          <p className="section-kicker">Layanan Utama</p>
           <h2>
-            Layanan Rental &amp; Driver
+            Transport Service &amp; Tours
             <br />
-            Sesuai Kebutuhan Perjalanan
+            Solusi Perjalanan Lengkap di Lombok
           </h2>
           <p className="services-desc">
-            Tersedia pilihan sewa lepas kunci maupun rental lengkap dengan pengemudi profesional untuk kenyamanan maksimal.
+            Seluruh layanan rental mobil sudah include driver profesional, BBM, dan air mineral. Melayani airport transfer BIZAM, city tour, paket wisata Sasak &amp; Gili, hingga rute luar daerah.
           </p>
         </Reveal>
 
-        <div className="services-grid">
+        <div className="services-grid mt-10">
           {SERVICES_DATA.map((srv, idx) => (
             <Reveal key={srv.title} delay={idx * 0.08}>
               <article className="service-item">
@@ -56,7 +56,7 @@ export function Services() {
                   <ul>
                     {srv.points.map((pt) => (
                       <li key={pt}>
-                        <CircleCheck size={14} />
+                        <CircleCheck size={14} className="text-[#2563EB]" />
                         {pt}
                       </li>
                     ))}

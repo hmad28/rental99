@@ -18,7 +18,7 @@ export function Footer() {
               <Rental99Logo variant="light" />
             </div>
             <p>
-              Rental99 menyediakan layanan rental mobil terpercaya untuk kebutuhan pribadi, dinas bisnis, airport transfer Juanda, dan wisata di Surabaya &amp; Sidoarjo.
+              Rental99 Transport Service &amp; Tours menyediakan layanan rental mobil include driver, BBM, dan air mineral untuk kebutuhan dinas bisnis, liburan keluarga, airport transfer BIZAM Lombok, dan paket wisata Lombok &amp; Gili.
             </p>
           </div>
 
@@ -26,18 +26,20 @@ export function Footer() {
             <h3 className="footer-heading">Menu</h3>
             <a href="#beranda">Beranda</a>
             <a href="#armada">Armada</a>
+            <a href="#tour">Paket Tour</a>
             <a href="#layanan">Layanan</a>
-            <a href="#tentang">Tentang</a>
+            <a href="#klien">Klien Kami</a>
             <a href="#faq">FAQ</a>
             <a href="#kontak">Kontak</a>
           </div>
 
           <div className="footer-links">
             <h3 className="footer-heading">Layanan</h3>
-            <a href="#layanan">Rental Harian</a>
-            <a href="#layanan">Rental + Driver</a>
-            <a href="#layanan">Antar Jemput &amp; Airport</a>
-            <a href="#layanan">Wisata &amp; Rombongan</a>
+            <a href="#layanan">Rental Mobil + Driver</a>
+            <a href="#layanan">Airport Transfer BIZAM</a>
+            <a href="#layanan">City Tour Lombok</a>
+            <a href="#tour">Sasak Tour &amp; Gili</a>
+            <a href="#armada">Wisata Rombongan &amp; Bus</a>
           </div>
 
           <div className="footer-contact">
@@ -74,7 +76,7 @@ export function Footer() {
         </div>
 
         <div className="container-page footer-bottom">
-          <p>© 2026 Rental99. All rights reserved.</p>
+          <p>© 2026 Rental99 Transport Service &amp; Tours. All rights reserved.</p>
         </div>
       </footer>
 

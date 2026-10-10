@@ -1,118 +1,267 @@
 export interface Car {
   name: string;
-  category: "City Car" | "MPV" | "Premium" | "Minibus";
+  category: "MPV" | "SUV" | "City Car" | "Luxury" | "Minibus & Bus";
   image: string;
-  transmission: "Matic" | "Manual" | "Automatic";
+  transmission: "Matic" | "Manual" | "Matic / Manual";
   seats: string;
-  price: number;
-  allInPrice: number;
+  price: number; // 0 for price by WhatsApp
+  priceLabel: string;
   badge?: string;
+  includes: string;
   features: string[];
 }
 
 export const FLEET_DATA: Car[] = [
   {
-    name: "Calya Matic",
-    category: "MPV",
-    image: "/images/drivemate/car-calya.webp",
-    transmission: "Matic",
-    seats: "7 Kursi",
-    price: 300000,
-    allInPrice: 650000,
-    badge: "Best Seller",
-    features: ["Matic", "7 Kursi", "AC"],
-  },
-  {
-    name: "Xenia FWD Manual",
-    category: "MPV",
-    image: "/images/drivemate/car-xenia.webp",
-    transmission: "Manual",
-    seats: "7 Kursi",
-    price: 300000,
-    allInPrice: 650000,
-    badge: "Paling Populer",
-    features: ["Manual", "7 Kursi", "AC"],
-  },
-  {
-    name: "Brio Matic",
-    category: "City Car",
-    image: "/images/drivemate/car-brio.webp",
-    transmission: "Matic",
-    seats: "5 Kursi",
-    price: 325000,
-    allInPrice: 650000,
-    badge: "Harga Hemat",
-    features: ["Matic", "5 Kursi", "AC"],
-  },
-  {
-    name: "Avanza FWD Matic",
-    category: "MPV",
-    image: "/images/drivemate/car-avanza.webp",
-    transmission: "Matic",
-    seats: "7 Kursi",
-    price: 400000,
-    allInPrice: 700000,
-    badge: "Favorit Keluarga",
-    features: ["Matic", "7 Kursi", "AC"],
-  },
-  {
-    name: "Innova Reborn",
+    name: "Toyota Innova Reborn",
     category: "MPV",
     image: "/images/drivemate/car-reborn-lama.webp",
     transmission: "Matic",
     seats: "7 Kursi",
-    price: 500000,
-    allInPrice: 825000,
-    badge: "Tersedia Hari Ini",
-    features: ["Matic", "7 Kursi", "AC"],
+    price: 850000,
+    priceLabel: "Rp 850.000 / Hari",
+    badge: "Favorit Wisata",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Matic", "7 Kursi", "AC Double Blower"],
   },
   {
-    name: "Innova New Reborn",
-    category: "MPV",
-    image: "/images/drivemate/car-reborn-baru.webp",
+    name: "Toyota Alphard",
+    category: "Luxury",
+    image: "/images/drivemate/car-alphard.png",
     transmission: "Matic",
-    seats: "7 Kursi",
-    price: 500000,
-    allInPrice: 825000,
-    badge: "City Tour",
-    features: ["Matic", "7 Kursi", "AC"],
+    seats: "7 Kursi (Captain Seat)",
+    price: 3300000,
+    priceLabel: "Rp 3.300.000 / Hari",
+    badge: "VIP & Luxury",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Matic", "Captain Seat", "Luxury Interior"],
   },
   {
-    name: "Xpander",
+    name: "Toyota Avanza",
     category: "MPV",
-    image: "/images/drivemate/car-xpander.webp",
-    transmission: "Matic",
-    seats: "7 Kursi",
-    price: 550000,
-    allInPrice: 850000,
-    badge: "Bisnis",
-    features: ["Matic", "7 Kursi", "AC"],
-  },
-  {
-    name: "Zenix Matic",
-    category: "Premium",
-    image: "/images/drivemate/car-zenix.webp",
+    image: "/images/drivemate/car-avanza.webp",
     transmission: "Matic",
     seats: "7 Kursi",
     price: 650000,
-    allInPrice: 1000000,
-    badge: "Banyak Pilihan",
-    features: ["Matic", "7 Kursi", "AC"],
+    priceLabel: "Rp 650.000 / Hari",
+    badge: "Paling Populer",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Matic", "7 Kursi", "AC Dingin"],
+  },
+  {
+    name: "Toyota Fortuner",
+    category: "SUV",
+    image: "/images/drivemate/car-fortuner.jpeg",
+    transmission: "Matic",
+    seats: "7 Kursi",
+    price: 1400000,
+    priceLabel: "Rp 1.400.000 / Hari",
+    badge: "SUV Gagah",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Matic", "7 Kursi", "Tangguh Semua Medan"],
   },
   {
     name: "Toyota Hiace Commuter",
-    category: "Minibus",
+    category: "Minibus & Bus",
     image: "/images/hiace.png",
     transmission: "Manual",
-    seats: "16 Kursi",
-    price: 1000000,
-    allInPrice: 1350000,
-    badge: "Wisata & Rombongan",
-    features: ["Manual", "16 Kursi", "AC Full"],
+    seats: "15 Kursi",
+    price: 1200000,
+    priceLabel: "Rp 1.200.000 / Hari",
+    badge: "Rombongan Nyaman",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Manual", "15 Kursi", "Kabin Luas"],
+  },
+  {
+    name: "Toyota Hiace Premio",
+    category: "Minibus & Bus",
+    image: "/images/drivemate/car-premio.png",
+    transmission: "Manual",
+    seats: "12–14 Kursi",
+    price: 1450000,
+    priceLabel: "Rp 1.450.000 / Hari",
+    badge: "Executive Van",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Manual", "12-14 Kursi", "Suspensi Mewah"],
+  },
+  {
+    name: "Mitsubishi Pajero Sport",
+    category: "SUV",
+    image: "/images/drivemate/car-pajero.jpg",
+    transmission: "Matic",
+    seats: "7 Kursi",
+    price: 1550000,
+    priceLabel: "Rp 1.550.000 / Hari",
+    badge: "Premium SUV",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Matic", "7 Kursi", "Kenyamanan Maksimal"],
+  },
+  {
+    name: "Honda Brio",
+    category: "City Car",
+    image: "/images/drivemate/car-brio.webp",
+    transmission: "Matic",
+    seats: "5 Kursi",
+    price: 550000,
+    priceLabel: "Rp 550.000 / Hari",
+    badge: "City Car Lincah",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Matic", "5 Kursi", "Hemat & Nyaman"],
+  },
+  {
+    name: "Toyota Agya",
+    category: "City Car",
+    image: "/images/ayla.png",
+    transmission: "Matic",
+    seats: "5 Kursi",
+    price: 500000,
+    priceLabel: "Rp 500.000 / Hari",
+    badge: "Paling Hemat",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Matic", "5 Kursi", "Praktis & Irit"],
+  },
+  {
+    name: "Isuzu Elf Long",
+    category: "Minibus & Bus",
+    image: "/images/drivemate/car-elf.webp",
+    transmission: "Manual",
+    seats: "17–19 Kursi",
+    price: 1300000,
+    priceLabel: "Rp 1.300.000 / Hari",
+    badge: "Kapasitas Besar",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Manual", "19 Kursi", "AC Ducting Full"],
+  },
+  {
+    name: "Medium Bus Pariwisata",
+    category: "Minibus & Bus",
+    image: "/images/drivemate/car-medium-bus.webp",
+    transmission: "Manual",
+    seats: "30–35 Kursi",
+    price: 0,
+    priceLabel: "Order via WhatsApp",
+    badge: "Bus Pariwisata",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Manual", "35 Kursi", "Karaoke & Bagasi Besar"],
+  },
+  {
+    name: "Big Bus Pariwisata",
+    category: "Minibus & Bus",
+    image: "/images/drivemate/car-big-bus.webp",
+    transmission: "Manual",
+    seats: "45–50 Kursi",
+    price: 0,
+    priceLabel: "Order via WhatsApp",
+    badge: "Pariwisata Besar",
+    includes: "Include Driver + BBM + Air Mineral",
+    features: ["Manual", "50 Kursi", "Full AC & Fasilitas Tour"],
   },
 ];
 
-export const FLEET_CATEGORIES = ["Semua", "MPV", "City Car", "Premium", "Minibus"] as const;
+export const FLEET_CATEGORIES = [
+  "Semua",
+  "MPV",
+  "SUV",
+  "City Car",
+  "Luxury",
+  "Minibus & Bus",
+] as const;
+
+export interface ClientLogo {
+  name: string;
+  logo: string;
+  category?: string;
+}
+
+export const CLIENTS_DATA: ClientLogo[] = [
+  { name: "Shell Indonesia", logo: "/images/clients/client-shell.png" },
+  { name: "Shopee Indonesia", logo: "/images/clients/client_shopee.png" },
+  { name: "Indofood", logo: "/images/clients/client_indo.png" },
+  { name: "PT Gumindo Perkasa Industri", logo: "/images/clients/client_gumindo.jpeg" },
+  { name: "Kementerian PUPR", logo: "/images/clients/client-pupr.png" },
+  { name: "Kementerian ESDM", logo: "/images/clients/client-esdm.svg" },
+  { name: "Kementerian Komunikasi & Digital", logo: "/images/clients/client-komdigi.svg" },
+  { name: "Alibaba Group", logo: "/images/clients/client-alibaba.webp" },
+  { name: "Indosat Ooredoo Hutchison", logo: "/images/clients/client-indosat.jpg" },
+  { name: "RRI Indonesia", logo: "/images/clients/client-rri.png" },
+  { name: "HMD Global", logo: "/images/clients/client-hmd.png" },
+  { name: "IndiGo Airlines", logo: "/images/clients/client-indigo.png" },
+  { name: "Pertamina Patra Niaga", logo: "/images/clients/client-pertamina.svg" },
+  { name: "Bank Mandiri", logo: "/images/clients/client-mandiri.svg" },
+];
+
+export interface TourPackage {
+  id: string;
+  title: string;
+  tag: string;
+  duration: string;
+  destinations: string[];
+  facilities: string[];
+  image: string;
+}
+
+export const TOUR_PACKAGES_DATA: TourPackage[] = [
+  {
+    id: "sasak-mandalika",
+    title: "Sasak Traditional & Mandalika Tour",
+    tag: "Paling Populer",
+    duration: "1 Hari (Full Day)",
+    image: "/images/gallery-journey.png",
+    destinations: [
+      "Desa Sukarara (Sentra Tenun Songket Khas Lombok)",
+      "Desa Sade / Ende (Perkampungan Adat Suku Sasak)",
+      "Pantai Kuta Mandalika & Kawasan Sirkuit MotoGP",
+      "Bukit Merese (Spot Sunset Panorama Laut Terbaik)",
+      "Pantai Tanjung Aan & Bukit Merese",
+    ],
+    facilities: [
+      "Mobil Ber-AC Nyaman & Terawat",
+      "Driver Ramah sebagai Local Guide",
+      "BBM & Tiket Masuk Seluruh Destinasi",
+      "Air Mineral Dingin selama Tour",
+    ],
+  },
+  {
+    id: "gili-snorkeling",
+    title: "Gili Trawangan 3 Island Snorkeling Tour",
+    tag: "Best Seller",
+    duration: "1 Hari (Full Day)",
+    image: "/images/gallery-fleet.png",
+    destinations: [
+      "Pelabuhan Teluk Nare / Bangsal",
+      "Snorkeling Patung Bawah Air Gili Meno",
+      "Snorkeling Penyu & Turtle Point Gili Trawangan",
+      "Feeding Fish & Terumbu Karang Gili Air",
+      "Sunset Panorama di Bukit Malimbu",
+    ],
+    facilities: [
+      "Antar-Jemput Hotel / Bandara BIZAM",
+      "Private Glass Bottom Boat",
+      "Snorkeling Gear & Dokumentasi GoPro",
+      "Driver + BBM + Air Mineral",
+    ],
+  },
+  {
+    id: "sembalun-rinjani",
+    title: "Sembalun Highland & Air Terjun Rinjani",
+    tag: "Favorite Nature",
+    duration: "1 Hari (Full Day)",
+    image: "/images/gallery-interior.png",
+    destinations: [
+      "Bukit Selong (Panorama Petak Sawah Berwarna)",
+      "Desa Adat Beleq Sembalun",
+      "Wisata Petik Stroberi & Pusuk Pas Sembalun",
+      "Air Terjun Sendang Gile & Tiu Kelep Kaki Rinjani",
+      "Taman Hutan Monyet Baun Pusuk",
+    ],
+    facilities: [
+      "Mobil Nyaman untuk Rute Pegunungan",
+      "Driver Berpengalaman Rute Rinjani",
+      "BBM & Tiket Masuk Objek Wisata",
+      "Local Guide Air Terjun & Air Mineral",
+    ],
+  },
+];
 
 export interface DriverOption {
   id: string;
@@ -121,10 +270,9 @@ export interface DriverOption {
 }
 
 export const DRIVER_OPTIONS: DriverOption[] = [
-  { id: "none", label: "Tanpa Driver (Lepas Kunci)", tag: "Tanpa Driver" },
-  { id: "city", label: "Driver Dalam Kota (+Rp200.000)", tag: "Driver Dalam Kota" },
-  { id: "outOfCity", label: "Driver Luar Kota (+Rp250.000)", tag: "Driver Luar Kota" },
-  { id: "allIn", label: "Paket All-in (Include Driver + BBM)", tag: "Include Driver + BBM" },
+  { id: "allIn", label: "Include Driver + BBM + Air Mineral", tag: "Include Driver + BBM + Air Mineral" },
+  { id: "driverOnly", label: "Driver Saja (Tanpa BBM)", tag: "Driver Saja" },
+  { id: "custom", label: "Custom Tour / Paket Wisata", tag: "Paket Tour" },
 ];
 
 export interface AreaOption {
@@ -134,153 +282,189 @@ export interface AreaOption {
 }
 
 export const AREA_OPTIONS: AreaOption[] = [
-  { id: "surabaya-sidoarjo", label: "Surabaya & Sidoarjo (Dalam Kota)", tag: "Surabaya & Sidoarjo" },
-  { id: "luar-daerah", label: "Luar Kota / Luar Daerah", tag: "Luar Daerah" },
+  { id: "bizam", label: "BIZAM Lombok (Bandara Internasional)", tag: "BIZAM Lombok" },
+  { id: "mataram", label: "Mataram & Kota", tag: "Mataram" },
+  { id: "senggigi", label: "Senggigi & Lombok Barat", tag: "Senggigi" },
+  { id: "mandalika", label: "Kuta Mandalika (Lombok Tengah)", tag: "Mandalika" },
+  { id: "gili", label: "Pelabuhan Bangsal / Gili Trawangan", tag: "Bangsal / Gili" },
+  { id: "sembalun", label: "Sembalun & Rinjani (Lombok Timur)", tag: "Sembalun" },
+  { id: "luar-daerah", label: "Luar Daerah (Sumbawa / Bima)", tag: "Luar Daerah" },
 ];
-
-export const DRIVER_PRICING = {
-  city: 200000,
-  outOfCity: 250000,
-  outOfRegionMin: 50000,
-  outOfRegionMax: 100000,
-  outOfRegionNote: "Paket All-in tersedia dengan Driver + BBM sesuai rute perjalanan.",
-};
 
 export const SERVICES_DATA = [
   {
-    title: "Rental Harian",
-    description: "Kendaraan praktis untuk agenda personal, keluarga, atau aktivitas bisnis harian.",
+    title: "Rental Mobil + Driver",
+    description: "Sewa mobil harian terawat lengkap dengan pengemudi ramah, BBM, dan air mineral untuk kenyamanan tanpa lelah.",
     image: "/images/gallery-fleet.png",
-    imageAlt: "Visual representatif armada rental harian Rental99",
-    points: ["Pilihan unit lepas kunci terawat", "Jadwal fleksibel dikonfirmasi via WhatsApp"],
-    iconType: "calendar",
-  },
-  {
-    title: "Rental + Driver",
-    description: "Layanan sewa mobil dengan pengemudi profesional untuk perjalanan santai dan bebas lelah.",
-    image: "/images/gallery-interior.png",
-    imageAlt: "Visual representatif layanan rental mobil dengan driver Rental99",
+    imageAlt: "Rental mobil plus driver Rental99 Lombok",
     points: [
-      "Dalam Kota: Rp200.000 / hari",
-      "Luar Kota: Rp250.000 / hari",
-      "Paket All-in: Include Driver + BBM tersedia",
+      "Include Driver + BBM + Air Mineral",
+      "Armada terawat, wangi, dan ber-AC dingin",
+      "Driver lokal hafal seluruh rute wisata Lombok",
     ],
     iconType: "user",
   },
   {
-    title: "Antar Jemput & Airport",
-    description: "Perjalanan terjadwal untuk kebutuhan antar jemput dan transfer bandara Juanda.",
+    title: "Airport Transfer BIZAM",
+    description: "Layanan antar-jemput tepat waktu di Bandara Internasional Zainuddin Abdul Madjid (BIZAM) Lombok menuju hotel Anda.",
     image: "/images/gallery-airport.png",
-    imageAlt: "Visual representatif layanan antar jemput bandara Rental99",
-    points: ["Titik jemput on-time terkoordinasi", "Pilihan armada menyesuaikan kapasitas bagasi"],
+    imageAlt: "Layanan Airport Transfer BIZAM Lombok Rental99",
+    points: [
+      "Penjemputan on-time di lobby kedatangan",
+      "Bebas repot bagasi dengan armada berkapasitas pas",
+      "Drop-off ke Mataram, Senggigi, Mandalika, Bangsal",
+    ],
     iconType: "plane",
   },
   {
-    title: "Wisata & Rombongan",
-    description: "Pilihan perjalanan untuk keluarga, agenda luar kota, dan rombongan wisata.",
+    title: "City Tour Lombok",
+    description: "Jelajahi keindahan budaya, kuliner ayam taliwang, Islamic Center, dan keindahan pesisir Mataram & Senggigi.",
+    image: "/images/gallery-interior.png",
+    imageAlt: "City Tour Lombok Rental99",
+    points: [
+      "Rute fleksibel menyesuaikan waktu Anda",
+      "Pusat oleh-oleh khas mutiara & tenun Lombok",
+      "Kunjungan spot kuliner legendaris terpercaya",
+    ],
+    iconType: "calendar",
+  },
+  {
+    title: "Sasak Tour & Gili",
+    description: "Paket perjalanan lengkap mengeksplorasi keaslian budaya suku Sasak, Sirkuit Mandalika, hingga island hopping 3 Gili.",
     image: "/images/gallery-journey.png",
-    imageAlt: "Visual representatif perjalanan wisata Rental99",
-    points: ["Rute dan destinasi dapat dikonsultasikan", "Armada minibus & MPV siap luar kota"],
+    imageAlt: "Sasak Tour dan Gili Rental99",
+    points: [
+      "Kunjungan Desa Adat Sade & Sukarara",
+      "Sirkuit Internasional Mandalika & Bukit Merese",
+      "Private boat transfer ke Gili Trawangan, Meno, Air",
+    ],
     iconType: "bus",
+  },
+  {
+    title: "Permintaan Luar Daerah / Kota",
+    description: "Layanan perjalanan lintas pulau dan kabupaten ke Sumbawa, Bima, Dompu, dan sekitarnya dengan unit prima.",
+    image: "/images/gallery-fleet.png",
+    imageAlt: "Layanan luar kota dan luar daerah Rental99",
+    points: [
+      "Siap rute jarak jauh lintas Pulau Sumbawa",
+      "Pengemudi berpengalaman jalan lintas provinsi",
+      "Tarif transparan include penyeberangan kapal ferry",
+    ],
+    iconType: "calendar",
   },
 ];
 
 export const FAQ_DATA = [
   {
-    question: "Apakah tersedia rental dengan driver dan BBM?",
-    answer: "Ya, Rental99 menyediakan opsi lepas kunci maupun paket lengkap Include Driver + BBM untuk kenyamanan perjalanan tanpa repot.",
+    question: "Apakah tarif rental sudah termasuk Driver dan BBM?",
+    answer: "Ya, seluruh armada Rental99 sudah termasuk Driver profesional, BBM, dan Air Mineral gratis selama perjalanan. Anda tinggal duduk santai menikmati perjalanan di Lombok.",
   },
   {
-    question: "Apakah tersedia rental lepas kunci?",
-    answer: "Tersedia untuk pelanggan yang memenuhi persyaratan verifikasi identitas (KTP, SIM A, dan dokumen pendukung). Hubungi WhatsApp kami untuk detail verifikasi.",
+    question: "Apakah melayani penjemputan langsung di Bandara BIZAM Lombok?",
+    answer: "Tentu saja. BIZAM (Bandara Internasional Zainuddin Abdul Madjid) adalah area layanan utama kami. Driver kami akan standby menyambut kedatangan Anda tepat waktu.",
   },
   {
-    question: "Apakah melayani perjalanan ke luar kota?",
-    answer: "Ya, kami melayani perjalanan dinas, wisata, dan keluarga ke berbagai kota di Jawa Timur maupun lintas provinsi dengan tarif transparan.",
+    question: "Bagaimana cara pemesanan Big Bus atau Medium Bus?",
+    answer: "Untuk armada Medium Bus (30-35 seat) dan Big Bus (45-50 seat), pemesanan dan penawaran harga khusus dapat langsung dikonsultasikan melalui WhatsApp kami sesuai durasi dan rute perjalanan.",
   },
   {
-    question: "Bagaimana proses booking kendaraan di Rental99?",
-    answer: "Sangat mudah: pilih unit kendaraan, tentukan tanggal serta layanan (lepas kunci atau dengan driver), lalu klik tombol WhatsApp untuk konfirmasi instan.",
+    question: "Apakah tersedia paket tour kustom (custom itinerary)?",
+    answer: "Sangat bisa. Anda dapat mengkombinasikan destinasi sesuai keinginan, misalnya Sasak Tour + Sunset Mandalika, atau Snorkeling 3 Gili + Sembalun.",
   },
   {
-    question: "Apa saja syarat pemesanan rental mobil?",
-    answer: "Untuk sewa dengan driver cukup menyertakan identitas dan jadwal. Untuk lepas kunci diperlukan verifikasi KTP, SIM A, serta deposit jaminan.",
+    question: "Apakah melayani perjalanan luar daerah seperti Sumbawa?",
+    answer: "Ya, kami melayani perjalanan dinas maupun wisata lintas daerah ke Pulau Sumbawa, Bima, dan sekitarnya dengan konfirmasi jadwal terlebih dahulu.",
   },
   {
-    question: "Bagaimana metode pembayarannya?",
-    answer: "Pembayaran dapat dilakukan melalui transfer bank resmi atau tunai setelah kesepakatan pemesanan dikonfirmasi oleh admin Rental99.",
+    question: "Bagaimana proses pembayaran booking di Rental99?",
+    answer: "Pemesanan dapat didiskusikan terlebih dahulu melalui WhatsApp. Setelah draft jadwal dan armada disepakati, pembayaran dapat diselesaikan dengan aman.",
   },
-];
-
-export const COVERAGE_PINS = [
-  { name: "Surabaya", left: "68%", top: "32%" },
-  { name: "Sidoarjo", left: "73%", top: "63%" },
-  { name: "Juanda", left: "83%", top: "48%" },
-  { name: "Gresik", left: "53%", top: "18%" },
-  { name: "Mojokerto", left: "46%", top: "65%" },
-  { name: "Pasuruan", left: "58%", top: "79%" },
 ];
 
 export const EXPERIENCE_ITEMS = [
   {
-    title: "Armada Bersih & Terawat",
-    description: "Setiap kendaraan melalui inspeksi berkala dan pembersihan menyeluruh sebelum diserahkan.",
+    title: "Include Driver + BBM + Mineral",
+    description: "Seluruh perjalanan sudah lengkap dengan driver berpengalaman, bahan bakar, dan air mineral dingin.",
     iconType: "shield",
   },
   {
-    title: "Proses Booking Cepat 5 Menit",
-    description: "Konsultasi dan konfirmasi unit langsung via WhatsApp dengan respon cepat dan ramah.",
-    iconType: "clipboard",
+    title: "Terpercaya Sejak 2012",
+    description: "Berpengalaman lebih dari 12 tahun melayani ribuan wisatawan, instansi BUMN, kementerian, dan korporasi.",
+    iconType: "clock",
   },
   {
-    title: "Harga Jujur & Transparan",
-    description: "Tarif jelas tanpa biaya siluman. Pilihan lepas kunci maupun Include Driver + BBM tercantum transparan.",
-    iconType: "check",
+    title: "Standby di BIZAM Lombok",
+    description: "Titik temu utama di Bandara Internasional Lombok dengan penjemputan tepat waktu dan ramah.",
+    iconType: "headset",
   },
   {
-    title: "Driver Berpengalaman & Ramah",
-    description: "Pengemudi profesional, paham rute jalan, dan mengutamakan keselamatan serta kenyamanan Anda.",
-    iconType: "chat",
+    title: "Armada Lengkap & Terawat",
+    description: "Tersedia 12 pilihan unit dari City Car, MPV, SUV, Luxury Alphard, hingga Bus Pariwisata berkapasitas besar.",
+    iconType: "car",
   },
 ];
 
-export const BOOKING_STEPS = [
+export interface BookingStep {
+  step: string;
+  title: string;
+  description: string;
+  iconType: "car" | "calendar" | "clipboard" | "check";
+}
+
+export const BOOKING_STEPS: BookingStep[] = [
   {
-    step: 1,
-    title: "Pilih Unit",
-    description: "Tentukan jenis mobil sesuai kebutuhan perjalanan Anda.",
+    step: "01",
+    title: "Pilih Armada / Paket Tour",
+    description: "Tentukan jenis kendaraan (12 pilihan unit) atau paket wisata Lombok yang Anda butuhkan.",
     iconType: "car",
   },
   {
-    step: 2,
-    title: "Kirim Jadwal & Rute",
-    description: "Sampaikan tanggal sewa, tujuan, dan opsi driver via WhatsApp.",
+    step: "02",
+    title: "Tentukan Jadwal & Rute",
+    description: "Informasikan tanggal kedatangan di BIZAM Lombok serta rencana tujuan perjalanan Anda.",
     iconType: "calendar",
   },
   {
-    step: 3,
-    title: "Konfirmasi Ketersediaan",
-    description: "Admin kami segera memverifikasi ketersediaan armada dalam hitungan menit.",
+    step: "03",
+    title: "Konfirmasi via WhatsApp",
+    description: "Admin Rental99 akan memberikan konfirmasi ketersediaan armada dan penawaran terbaik secara instan.",
     iconType: "clipboard",
   },
   {
-    step: 4,
-    title: "Mobil Siap Jalan",
-    description: "Armada siap diantarkan atau dijemput sesuai jadwal keberangkatan.",
+    step: "04",
+    title: "Jemput On-Time & Nikmati Perjalanan",
+    description: "Driver kami siap menyambut kedatangan Anda di BIZAM atau hotel untuk perjalanan yang berkesan.",
     iconType: "check",
   },
 ];
 
-export const BRAND_NAME = "Rental99";
-export const PHONE_NUMBER = "085655221633";
-export const EMAIL_ADDRESS = "info@rental99.id";
-export const ADDRESS_TEXT = "Jl. Raya Jaretan, Perum Sun Garden Blok A5/02, Urangagung, Sumberejo, Sidoarjo, Jawa Timur";
-export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/o8b3UyufouA529XU7";
+export const TRUST_STRIP_ITEMS = [
+  { title: "Include Driver + BBM", subtitle: "Plus Air Mineral Gratis" },
+  { title: "Sejak Tahun 2012", subtitle: "Transportasi Terpercaya" },
+  { title: "Area Utama BIZAM", subtitle: "Standby Bandara Lombok" },
+  { title: "12 Pilihan Armada", subtitle: "City Car hingga Big Bus" },
+];
 
-export function whatsappUrl(message?: string): string {
-  const defaultMsg = "Halo Rental99, saya melihat dari website dan ingin menanyakan ketersediaan rental mobil.";
-  const text = message || defaultMsg;
-  const rawPhone = PHONE_NUMBER.replace(/\D/g, "");
-  const phone = rawPhone.startsWith("0") ? `62${rawPhone.slice(1)}` : rawPhone;
-  return phone ? `https://wa.me/${phone}?text=${encodeURIComponent(text)}` : "#kontak";
+export const BRAND_INFO = {
+  name: "Rental99",
+  tagline: "Transport Service & Tours",
+  established: "2012",
+  claim: "Transportasi terpercaya sejak tahun 2012",
+  phone: "085655221633",
+  whatsapp: "6285655221633",
+  email: "info@rental99.id",
+  address: "Area Bandara Internasional Lombok (BIZAM), Praya, Lombok Tengah, NTB",
+  logoUrl: "/images/rental99-logo.png",
+  iconUrl: "/images/rental99-icon.png",
+};
+
+export const PHONE_NUMBER = BRAND_INFO.phone;
+export const EMAIL_ADDRESS = BRAND_INFO.email;
+export const ADDRESS_TEXT = BRAND_INFO.address;
+export const GOOGLE_MAPS_URL = "https://maps.google.com/?q=Bandara+Internasional+Lombok+BIZAM";
+
+export function whatsappUrl(customText?: string) {
+  const defaultText = `Halo Rental99 Transport Service & Tours, saya ingin konsultasi sewa armada / paket tour di Lombok.`;
+  const text = encodeURIComponent(customText || defaultText);
+  return `https://wa.me/6285655221633?text=${text}`;
 }
