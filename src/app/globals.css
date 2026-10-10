@@ -172,3 +172,52 @@
 .client-marquee-down:hover {
   animation-play-state: paused;
 }
+
+/* ========================================================
+   RESPONSIVE ANTI-OVERFLOW SAFETY (Fix sideways scrolling)
+   ======================================================== */
+html,
+body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100%;
+  position: relative;
+}
+
+main,
+section,
+header,
+footer {
+  max-width: 100% !important;
+  overflow-x: clip;
+}
+
+/* Neutralize legacy overflowing classes */
+.mobile-hero-showcase,
+.mobile-hero-fleet-wrap,
+.cta-vehicle,
+.hero-visual,
+.fleet-track,
+.fleet-tabs,
+.gallery-grid {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+}
+
+.container-page {
+  width: 100%;
+  max-width: min(100% - 40px, 1200px);
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .container-page {
+    max-width: calc(100% - 32px);
+    padding-inline: 0;
+  }
+}
+

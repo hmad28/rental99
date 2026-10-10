@@ -130,14 +130,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" className="overflow-x-hidden max-w-full">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${plusJakartaSans.variable} font-sans antialiased`}>
+      <body className={`${plusJakartaSans.variable} font-sans antialiased overflow-x-hidden max-w-full w-full`}>
         {children}
       </body>
     </html>

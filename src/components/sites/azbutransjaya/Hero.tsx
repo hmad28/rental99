@@ -17,19 +17,19 @@ export function Hero() {
     : {};
 
   return (
-    <section id="beranda" className="relative w-full overflow-hidden border-b border-[#E2E8F0]">
+    <section id="beranda" className="relative w-full max-w-full overflow-hidden border-b border-[#E2E8F0]">
       {/* =========================================
           DESKTOP HERO VIEW (hidden md:block)
           Background: hero-bg-desktop.png
           ========================================= */}
-      <div className="hidden md:block relative min-h-[640px] lg:min-h-[700px] xl:min-h-[740px] w-full">
+      <div className="hidden md:block relative min-h-[640px] lg:min-h-[700px] xl:min-h-[740px] w-full max-w-full">
         {/* Desktop Background Image */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute inset-0 pointer-events-none max-w-full" aria-hidden="true">
           <Image
             src="/images/hero-bg-desktop.png"
             alt="Rental Mobil & Tour BIZAM Lombok Rental99"
             fill
-            sizes="100vw"
+            sizes="100%"
             priority
             className="object-cover object-right-bottom lg:object-center"
           />
@@ -97,49 +97,53 @@ export function Hero() {
 
       {/* =========================================
           MOBILE HERO VIEW (block md:hidden)
-          Redesigned: Clean, Premium, Minimal UI
+          Clean, lower, balanced, no horizontal overflow
           ========================================= */}
-      <div className="block md:hidden relative min-h-[660px] sm:min-h-[720px] w-full overflow-hidden">
-        {/* Mobile Background Image (Full visual) */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div className="block md:hidden relative min-h-[690px] sm:min-h-[760px] w-full max-w-full overflow-hidden">
+        {/* Mobile Background Image (Full visual, avoiding 100vw) */}
+        <div className="absolute inset-0 pointer-events-none max-w-full" aria-hidden="true">
           <Image
             src="/images/hero-bg-mobile.png"
             alt="Rental Mobil & Tour BIZAM Lombok Rental99"
             fill
-            sizes="100vw"
+            sizes="100%"
             priority
             className="object-cover object-bottom"
           />
         </div>
 
-        {/* Soft white-to-transparent gradient overlay behind text area only (upper 50%) */}
+        {/* Soft white-to-transparent gradient overlay behind text area only (upper 48%) */}
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-[52%] bg-gradient-to-b from-white/95 via-white/80 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-[48%] max-w-full bg-gradient-to-b from-white/95 via-white/80 to-transparent"
           aria-hidden="true"
         />
 
-        {/* Mobile Hero Content Overlay */}
-        <div className="relative z-10 px-5 pt-7 pb-8 flex flex-col justify-between min-h-[660px] sm:min-h-[720px]">
+        {/* Mobile Hero Content Overlay:
+            - 24-32px spacing below navbar: pt-8 (32px)
+            - 20px horizontal padding: px-5
+            - Flex column between top text block & bottom visual space
+        */}
+        <div className="relative z-10 px-5 pt-8 sm:pt-10 pb-8 flex flex-col justify-between min-h-[690px] sm:min-h-[760px] max-w-full">
           {/* Upper 45–50%: Minimal, Premium Text Block */}
-          <div className="max-w-[320px]">
+          <div className="max-w-[320px] w-full">
             {/* Small Eyebrow Text */}
-            <p className="text-[10.5px] font-bold uppercase tracking-[0.14em] text-[#2563EB]">
+            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#2563EB]">
               Rental99 • BIZAM Lombok
             </p>
 
             {/* Strong, Tighter Headline */}
-            <h1 className="mt-1.5 text-[27px] sm:text-[31px] font-extrabold tracking-tight text-[#0F172A] leading-[1.12]">
+            <h1 className="mt-2.5 text-[28px] sm:text-[32px] font-extrabold tracking-tight text-[#0F172A] leading-[1.14]">
               Rental Mobil &amp; Tour
               <span className="block text-[#2563EB]">BIZAM Lombok</span>
             </h1>
 
             {/* Short Supporting Sentence */}
-            <p className="mt-2 text-xs text-slate-600 leading-relaxed font-normal">
+            <p className="mt-3 text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal max-w-[310px]">
               Armada terawat lengkap include driver, BBM &amp; mineral siap di Bandara BIZAM.
             </p>
 
-            {/* One Primary WhatsApp CTA + One Secondary "Lihat Armada" Text Link */}
-            <div className="mt-4 flex items-center gap-4">
+            {/* CTA Row: wraps safely if needed */}
+            <div className="mt-5 flex flex-wrap items-center gap-3.5">
               <a
                 href={whatsappUrl()}
                 target="_blank"
@@ -159,15 +163,15 @@ export function Hero() {
               </a>
             </div>
 
-            {/* Compact Trust Line */}
-            <div className="mt-3.5 flex items-center gap-1.5 text-[10.5px] font-medium text-slate-500">
+            {/* Compact Trust Line with sufficient spacing below CTA */}
+            <div className="mt-4 sm:mt-5 flex items-center gap-2 text-[11px] font-medium text-slate-500">
               <span className="size-1.5 rounded-full bg-emerald-500 shrink-0" />
-              <span>Driver + BBM • Air Mineral • Sejak 2012</span>
+              <span>Include Driver + BBM • Air Mineral • Sejak 2012</span>
             </div>
           </div>
 
-          {/* Lower 50–55%: Unobstructed Vehicle Fleet & Lombok Scenery Visual Space */}
-          <div className="h-[320px] sm:h-[370px]" aria-hidden="true" />
+          {/* Lower 50–55%: Unobstructed Vehicle Fleet Visual Space */}
+          <div className="h-[340px] sm:h-[390px] w-full" aria-hidden="true" />
         </div>
       </div>
     </section>
