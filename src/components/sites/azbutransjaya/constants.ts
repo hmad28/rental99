@@ -174,20 +174,19 @@ export interface ClientLogo {
 }
 
 export const CLIENTS_DATA: ClientLogo[] = [
-  { name: "Shell Indonesia", logo: "/images/clients/client-shell.png" },
-  { name: "Shopee Indonesia", logo: "/images/clients/client_shopee.png" },
-  { name: "Indofood", logo: "/images/clients/client_indo.png" },
-  { name: "PT Gumindo Perkasa Industri", logo: "/images/clients/client_gumindo.jpeg" },
-  { name: "Kementerian PUPR", logo: "/images/clients/client-pupr.png" },
-  { name: "Kementerian ESDM", logo: "/images/clients/client-esdm.svg" },
-  { name: "Kementerian Komunikasi & Digital", logo: "/images/clients/client-komdigi.svg" },
-  { name: "Alibaba Group", logo: "/images/clients/client-alibaba.webp" },
-  { name: "Indosat Ooredoo Hutchison", logo: "/images/clients/client-indosat.jpg" },
-  { name: "RRI Indonesia", logo: "/images/clients/client-rri.png" },
-  { name: "HMD Global", logo: "/images/clients/client-hmd.png" },
-  { name: "IndiGo Airlines", logo: "/images/clients/client-indigo.png" },
-  { name: "Pertamina Patra Niaga", logo: "/images/clients/client-pertamina.svg" },
-  { name: "Bank Mandiri", logo: "/images/clients/client-mandiri.svg" },
+  { name: "MS Glow For Men", logo: "/images/clients/ms-glow-men.png" },
+  { name: "DANA Indonesia", logo: "/images/clients/dana.webp" },
+  { name: "BRIN (Badan Riset & Inovasi Nasional)", logo: "/images/clients/brin.svg" },
+  { name: "J99 Corp.", logo: "/images/clients/j99-corp.png" },
+  { name: "Traveloka", logo: "/images/clients/traveloka.webp" },
+  { name: "Bank Mandiri", logo: "/images/clients/mandiri.png" },
+  { name: "Bank Indonesia", logo: "/images/clients/bank-indonesia.png" },
+  { name: "Kementerian Imigrasi & Pemasyarakatan", logo: "/images/clients/kemenimipas.png" },
+  { name: "Aston International", logo: "/images/clients/aston.png" },
+  { name: "Ferrari Owners' Club Indonesia", logo: "/images/clients/foc-indonesia.png" },
+  { name: "BNPB Indonesia", logo: "/images/clients/bnpb.png" },
+  { name: "Telkom Indonesia", logo: "/images/clients/telkom.png" },
+  { name: "McLaren Club Indonesia", logo: "/images/clients/mclaren-club.png" },
 ];
 
 export interface TourPackage {

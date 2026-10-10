@@ -6,9 +6,10 @@ import { CLIENTS_DATA } from "./constants";
 import { Reveal } from "./Reveal";
 
 export function ClientsSection() {
-  // Split 14 logos into 2 columns of 7 logos each
-  const col1Logos = CLIENTS_DATA.slice(0, 7);
-  const col2Logos = CLIENTS_DATA.slice(7, 14);
+  // Split logos into 2 columns
+  const half = Math.ceil(CLIENTS_DATA.length / 2);
+  const col1Logos = CLIENTS_DATA.slice(0, half);
+  const col2Logos = CLIENTS_DATA.slice(half);
 
   // Duplicate each column for a seamless infinite loop
   const duplicatedCol1 = [...col1Logos, ...col1Logos];
@@ -48,7 +49,7 @@ export function ClientsSection() {
                 <div className="rounded-xl border border-slate-200 bg-white p-3.5 shadow-xs">
                   <div className="flex items-center gap-1.5 text-lg font-black text-[#2563EB]">
                     <CheckCircle2 className="size-4 text-emerald-600" />
-                    <span>14+ Mitra</span>
+                    <span>13+ Mitra</span>
                   </div>
                   <p className="mt-0.5 text-[11px] font-medium text-slate-500">
                     BUMN &amp; Instansi Resmi
