@@ -16,144 +16,163 @@ export function Hero() {
       }
     : {};
 
-  const animVisual = !shouldReduceMotion
-    ? {
-        initial: { opacity: 0, scale: 0.98 },
-        animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] as const },
-      }
-    : {};
-
   return (
-    <section id="beranda" className="hero-section">
-      {/* Mobile Hero View */}
-      <div className="mobile-hero-container">
-        <div className="mobile-hero-bg-layer" aria-hidden="true">
+    <section id="beranda" className="relative w-full overflow-hidden border-b border-[#E2E8F0]">
+      {/* =========================================
+          DESKTOP HERO VIEW (hidden md:block)
+          Background: hero-bg-desktop.png
+          ========================================= */}
+      <div className="hidden md:block relative min-h-[640px] lg:min-h-[700px] xl:min-h-[740px] w-full">
+        {/* Desktop Background Image */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <Image
-            src="/images/drivemate/city-bg.jpg"
-            alt=""
+            src="/images/hero-bg-desktop.png"
+            alt="Rental Mobil & Tour BIZAM Lombok Rental99"
             fill
             sizes="100vw"
             priority
-            className="mobile-hero-bg-img opacity-20"
+            className="object-cover object-right-bottom lg:object-center"
           />
         </div>
 
-        <div className="mobile-hero-content">
-          <p className="mobile-hero-eyebrow">Transport Service &amp; Tours • BIZAM Lombok</p>
-          <div className="mobile-hero-title" role="heading" aria-level={1}>
-            Rental Mobil &amp; Tour
-            <br />
-            <span>Lombok BIZAM</span>
-          </div>
-          <p className="mobile-hero-desc">
-            Transportasi terpercaya sejak tahun 2012. 12 armada prima lengkap <strong>Include Driver + BBM + Mineral</strong>.
-          </p>
+        {/* Desktop Hero Content Overlay */}
+        <div className="container-page relative z-10 flex min-h-[640px] lg:min-h-[700px] xl:min-h-[740px] items-center">
+          <motion.div className="max-w-[560px] lg:max-w-[620px] py-16 lg:py-20" {...animFadeUp}>
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-white/80 px-3.5 py-1 text-xs font-bold text-[#2563EB] shadow-2xs backdrop-blur-xs">
+              <span>Rental99 • Transport Service &amp; Tours</span>
+            </div>
 
-          <div className="mobile-hero-actions">
-            <a
-              href={whatsappUrl()}
-              target="_blank"
-              rel="noreferrer"
-              className="button-link button-primary mobile-hero-btn-primary"
-            >
-              <MessageCircle size={18} />
-              <span>Booking via WhatsApp</span>
-            </a>
-            <a href="#armada" className="button-link button-secondary mobile-hero-btn-secondary">
-              <CarFront size={18} />
-              <span>Lihat Armada</span>
-            </a>
-          </div>
+            {/* Main Headline */}
+            <h1 className="mt-4 text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-[#0F172A] leading-[1.08]">
+              Rental Mobil &amp; Tour
+              <span className="block text-[#2563EB]">BIZAM Lombok</span>
+            </h1>
 
-          <div className="mobile-hero-trust-chips">
-            <span className="mobile-trust-chip">
-              <ShieldCheck size={13} className="mobile-trust-icon" />
-              Include Driver + BBM
-            </span>
-            <span className="mobile-trust-chip">
-              <Award size={13} className="mobile-trust-icon" />
-              Sejak Tahun 2012
-            </span>
-            <span className="mobile-trust-chip">
-              <MapPin size={13} className="mobile-trust-icon" />
-              Standby BIZAM
-            </span>
-          </div>
-        </div>
+            {/* Description */}
+            <p className="mt-4 max-w-lg text-sm lg:text-base leading-relaxed text-[#475569] font-medium">
+              Transportasi terpercaya sejak tahun 2012 di Lombok. Pilihan 12 armada prima lengkap{" "}
+              <strong className="text-[#0F172A]">Include Driver + BBM + Air Mineral</strong> untuk airport transfer BIZAM, city tour, Sasak &amp; Gili.
+            </p>
 
-        <div className="mobile-hero-showcase">
-          <div className="mobile-hero-red-road" aria-hidden="true">
-            <div className="mobile-hero-road-glow" />
-            <div className="mobile-hero-road-surface" />
-          </div>
-          <div className="mobile-hero-fleet-wrap">
-            <Image
-              src="/images/hero-fleet-final.png"
-              alt="Armada Rental99 Lombok"
-              fill
-              sizes="(max-width: 767px) 120vw, 50vw"
-              priority
-              className="mobile-hero-fleet-img"
-            />
-          </div>
+            {/* CTA Buttons */}
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/25 transition hover:bg-[#1D4ED8] hover:shadow-xl hover:shadow-blue-600/30 active:scale-[0.98]"
+              >
+                <MessageCircle className="size-4" />
+                <span>Booking via WhatsApp</span>
+              </a>
+
+              <a
+                href="#armada"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white/90 px-6 py-3.5 text-sm font-bold text-[#0F172A] shadow-xs backdrop-blur-xs transition hover:border-blue-400 hover:text-[#2563EB] hover:bg-white active:scale-[0.98]"
+              >
+                <CarFront className="size-4" />
+                <span>Lihat Armada</span>
+              </a>
+            </div>
+
+            {/* Trust Pills */}
+            <div className="mt-8 flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-700">
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white/85 px-3 py-1.5 shadow-2xs backdrop-blur-xs">
+                <ShieldCheck className="size-3.5 text-[#2563EB]" />
+                Driver + BBM + Mineral
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white/85 px-3 py-1.5 shadow-2xs backdrop-blur-xs">
+                <Award className="size-3.5 text-[#2563EB]" />
+                Terpercaya Sejak 2012
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white/85 px-3 py-1.5 shadow-2xs backdrop-blur-xs">
+                <MapPin className="size-3.5 text-[#2563EB]" />
+                Standby BIZAM Lombok
+              </span>
+            </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Desktop Hero View */}
-      <div className="container-page hero-grid desktop-hero-grid">
-        <motion.div className="hero-copy" {...animFadeUp}>
-          <p className="hero-eyebrow">Rental99 • Transport Service &amp; Tours</p>
-          <h1>
-            Rental Mobil &amp; Tour
-            <span>BIZAM Lombok</span>
-          </h1>
-          <p className="hero-description">
-            Transportasi terpercaya sejak tahun 2012 di Lombok. Pilihan 12 armada prima lengkap <strong>Include Driver + BBM + Air Mineral</strong> untuk airport transfer BIZAM, city tour, Sasak &amp; Gili.
-          </p>
-
-          <div className="hero-actions">
-            <a
-              href={whatsappUrl()}
-              target="_blank"
-              rel="noreferrer"
-              className="button-link button-primary"
-            >
-              <MessageCircle size={18} />
-              <span>Booking via WhatsApp</span>
-            </a>
-            <a href="#armada" className="button-link button-secondary">
-              <CarFront size={18} />
-              <span>Lihat Armada</span>
-            </a>
-          </div>
-
-          <div className="hero-trust">
-            <span>
-              <ShieldCheck size={16} />
-              Driver + BBM + Mineral
-            </span>
-            <span>
-              <Award size={16} />
-              Terpercaya Sejak 2012
-            </span>
-            <span>
-              <MapPin size={16} />
-              Standby BIZAM Lombok
-            </span>
-          </div>
-        </motion.div>
-
-        <motion.div className="hero-visual" {...animVisual}>
+      {/* =========================================
+          MOBILE HERO VIEW (block md:hidden)
+          Background: hero-bg-mobile.png
+          ========================================= */}
+      <div className="block md:hidden relative min-h-[720px] sm:min-h-[800px] w-full overflow-hidden">
+        {/* Mobile Background Image */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <Image
-            src="/images/hero-fleet-final.png"
-            alt="Armada Rental Mobil Rental99 BIZAM Lombok"
+            src="/images/hero-bg-mobile.png"
+            alt="Rental Mobil & Tour BIZAM Lombok Rental99"
             fill
-            sizes="(max-width: 767px) 100vw, 58vw"
+            sizes="100vw"
             priority
-            className="hero-fleet-image"
+            className="object-cover object-center"
           />
-        </motion.div>
+        </div>
+
+        {/* Mobile Hero Content Overlay */}
+        <div className="relative z-10 px-5 pt-8 pb-10 flex flex-col justify-between min-h-[720px] sm:min-h-[800px]">
+          <div>
+            {/* Eyebrow */}
+            <p className="text-[11px] font-bold uppercase tracking-wider text-[#2563EB]">
+              Transport Service &amp; Tours • BIZAM Lombok
+            </p>
+
+            {/* Title */}
+            <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A] leading-tight">
+              Rental Mobil &amp; Tour
+              <span className="block text-[#2563EB]">Lombok BIZAM</span>
+            </h1>
+
+            {/* Description */}
+            <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-sm">
+              Transportasi terpercaya sejak tahun 2012. 12 armada prima lengkap{" "}
+              <strong className="text-slate-900">Include Driver + BBM + Mineral</strong>.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="mt-5 flex flex-col gap-2.5 max-w-xs">
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noreferrer"
+                className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#2563EB] text-xs sm:text-sm font-bold text-white shadow-md shadow-blue-600/30 transition hover:bg-[#1D4ED8]"
+              >
+                <MessageCircle className="size-4" />
+                <span>Booking via WhatsApp</span>
+              </a>
+
+              <a
+                href="#armada"
+                className="flex h-11 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white/95 text-xs sm:text-sm font-bold text-[#0F172A] shadow-xs backdrop-blur-xs transition hover:bg-white"
+              >
+                <CarFront className="size-4" />
+                <span>Lihat Armada</span>
+              </a>
+            </div>
+
+            {/* Trust Chips */}
+            <div className="mt-4 flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-700">
+              <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/90 px-2.5 py-1 shadow-2xs backdrop-blur-xs">
+                <ShieldCheck className="size-3 text-[#2563EB]" />
+                Include Driver + BBM
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/90 px-2.5 py-1 shadow-2xs backdrop-blur-xs">
+                <Award className="size-3 text-[#2563EB]" />
+                Sejak Tahun 2012
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/90 px-2.5 py-1 shadow-2xs backdrop-blur-xs">
+                <MapPin className="size-3 text-[#2563EB]" />
+                Standby BIZAM
+              </span>
+            </div>
+          </div>
+
+          {/* Bottom space leaves the integrated vehicles & scenery fully visible */}
+          <div className="h-44 sm:h-56" aria-hidden="true" />
+        </div>
       </div>
     </section>
   );
