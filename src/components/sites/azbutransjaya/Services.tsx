@@ -44,7 +44,7 @@ export function Services() {
 
               <div className="mt-6 sm:mt-8">
                 <a
-                  href={whatsappUrl("Halo Rental99 Transport Service & Tours, saya ingin konsultasi layanan transportasi di Lombok.")}
+                  href={whatsappUrl("Halo Rental99, saya lihat di website Rental99 dan ingin konsultasi layanan transportasi di Lombok.")}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-xs sm:text-sm font-bold text-white shadow-xs transition hover:bg-[#1D4ED8] hover:shadow-md active:scale-[0.98]"
@@ -64,7 +64,7 @@ export function Services() {
                   {SERVICES_DATA.map((srv) => (
                     <a
                       key={srv.id}
-                      href={whatsappUrl(`Halo Rental99, saya ingin menanyakan informasi mengenai "${srv.title}".`)}
+                      href={whatsappUrl(`Halo Rental99, saya lihat di website Rental99, saya ingin menanyakan informasi mengenai layanan "${srv.title}".`)}
                       target="_blank"
                       rel="noreferrer"
                       className="group flex items-center justify-between p-4 sm:p-5 transition hover:bg-blue-50/40"

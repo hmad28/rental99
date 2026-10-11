@@ -54,7 +54,7 @@ const jsonLd = [
     name: "Rental99",
     legalName: "Rental99 Transport Service & Tours",
     url: "https://rental99.id",
-    telephone: "+6285655221633",
+    telephone: "+6287864615865",
     email: "info@rental99.id",
     address: {
       "@type": "PostalAddress",

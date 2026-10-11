@@ -420,8 +420,8 @@ export const BRAND_INFO = {
   tagline: "Transport Service & Tours",
   established: "2012",
   claim: "Transportasi terpercaya sejak tahun 2012",
-  phone: "085655221633",
-  whatsapp: "6285655221633",
+  phone: "+62 878-6461-5865",
+  whatsapp: "6287864615865",
   email: "info@rental99.id",
   address: "Area Bandara Internasional Lombok (BIZAM), Praya, Lombok Tengah, NTB",
   logoUrl: "/images/rental99-logo.png",
@@ -434,7 +434,7 @@ export const ADDRESS_TEXT = BRAND_INFO.address;
 export const GOOGLE_MAPS_URL = "https://maps.google.com/?q=Bandara+Internasional+Lombok+BIZAM";
 
 export function whatsappUrl(customText?: string) {
-  const defaultText = `Halo Rental99 Transport Service & Tours, saya ingin konsultasi sewa armada / paket tour di Lombok.`;
+  const defaultText = `Halo Rental99, saya lihat di website Rental99 dan ingin konsultasi sewa armada / paket tour di Lombok.`;
   const text = encodeURIComponent(customText || defaultText);
-  return `https://wa.me/6285655221633?text=${text}`;
+  return `https://wa.me/${BRAND_INFO.whatsapp}?text=${text}`;
 }

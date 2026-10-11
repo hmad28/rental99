@@ -81,7 +81,7 @@ export function FleetCatalog() {
         <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
           {visibleCars.map((car, idx) => {
             const isBus = car.price === 0;
-            const bookingMsg = `Halo Rental99 Transport Service & Tours, saya ingin booking armada ${car.name} (${!isBus ? `Rp ${car.price.toLocaleString("id-ID")}` : "Order by WhatsApp"}). Mohon info ketersediaan unitnya.`;
+            const bookingMsg = `Halo Rental99, saya lihat di website Rental99, saya ingin booking armada ${car.name} (${!isBus ? `Rp ${car.price.toLocaleString("id-ID")}` : "Order by WhatsApp"}). Mohon info ketersediaan unitnya.`;
 
             return (
               <Reveal key={car.name} delay={idx * 0.04}>

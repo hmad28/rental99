@@ -26,7 +26,7 @@ export function TourPackages() {
 
           <Reveal delay={0.1}>
             <a
-              href={whatsappUrl("Halo Rental99 Transport Service & Tours, saya ingin konsultasi custom paket tour di Lombok.")}
+              href={whatsappUrl("Halo Rental99, saya lihat di website Rental99 dan ingin konsultasi custom paket tour di Lombok.")}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-blue-600 bg-white px-5 py-2.5 text-xs sm:text-sm font-bold text-[#2563EB] shadow-xs transition hover:bg-blue-50 hover:shadow-sm"
@@ -40,7 +40,7 @@ export function TourPackages() {
         {/* 3-Column Tour Packages Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {TOUR_PACKAGES_DATA.map((pkg, idx) => {
-            const bookingText = `Halo Rental99, saya tertarik memesan "${pkg.title}" (${pkg.duration}). Mohon info ketersediaan dan detail perjalanannya.`;
+            const bookingText = `Halo Rental99, saya lihat di website Rental99, saya tertarik memesan "${pkg.title}" (${pkg.duration}). Mohon info ketersediaan dan detail perjalanannya.`;
 
             return (
               <Reveal key={pkg.id} delay={idx * 0.08}>
