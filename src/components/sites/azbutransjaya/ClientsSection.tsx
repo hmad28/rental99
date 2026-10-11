@@ -6,17 +6,16 @@ import { CLIENTS_DATA } from "./constants";
 import { Reveal } from "./Reveal";
 
 export function ClientsSection() {
-  // Row 1: Full CLIENTS_DATA duplicated for seamless infinite loop (13 * 2 = 26 items)
-  const duplicatedRow1 = [...CLIENTS_DATA, ...CLIENTS_DATA];
-
-  // Row 2: Shifted CLIENTS_DATA (to provide visual variety against row 1) duplicated for seamless infinite loop
+  const row1Logos = CLIENTS_DATA;
   const row2Logos = [...CLIENTS_DATA.slice(6), ...CLIENTS_DATA.slice(0, 6)];
-  const duplicatedRow2 = [...row2Logos, ...row2Logos];
 
   return (
-    <section id="klien" className="relative w-full max-w-full overflow-hidden bg-gradient-to-b from-[#F0F7FF]/50 via-white to-white py-16 sm:py-20 lg:py-24 border-b border-blue-100/60">
+    <section
+      id="klien"
+      className="relative w-full max-w-full overflow-hidden bg-white py-16 sm:py-20 lg:py-24 border-b border-slate-100"
+    >
       {/* Section Header */}
-      <div className="container-page mb-10 sm:mb-12 text-center">
+      <div className="container-page mb-10 sm:mb-14 text-center">
         <Reveal>
           {/* Claim badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/90 px-4 py-1.5 text-xs font-bold text-[#2563EB] shadow-xs">
@@ -35,68 +34,82 @@ export function ClientsSection() {
       </div>
 
       {/* 2-Row Horizontal Infinite Marquee Ticker */}
-      <div className="relative w-full max-w-full overflow-hidden">
-        {/* Left & Right Edge Gradient Fades for Smooth Seamless Transition */}
+      <div className="relative w-full max-w-full overflow-hidden py-2">
+        {/* Soft Left & Right Edge Gradient Fades for Smooth Seamless Transition */}
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-32 bg-gradient-to-r from-white via-white/80 to-transparent"
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-14 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-32 bg-gradient-to-l from-white via-white/80 to-transparent"
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-14 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent"
           aria-hidden="true"
         />
 
-        <div className="flex flex-col gap-3.5 sm:gap-4.5 overflow-hidden">
+        <div className="flex flex-col gap-6 sm:gap-8 overflow-hidden">
           {/* Baris Pertama: Bergerak terus ke satu arah (Kanan ke Kiri) */}
-          <div className="relative w-full overflow-hidden">
-            <div className="client-marquee-left flex gap-3.5 sm:gap-4.5 hover:[animation-play-state:paused]">
-              {duplicatedRow1.map((client, idx) => (
-                <div
-                  key={`r1-${client.name}-${idx}`}
-                  className="flex h-[76px] sm:h-[86px] w-[180px] sm:w-[210px] shrink-0 items-center justify-center rounded-2xl border border-slate-200/90 bg-white px-5 py-3 shadow-[0_2px_8px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-0.5 hover:border-blue-400 hover:shadow-md"
-                  title={client.name}
-                >
-                  <div className="relative flex h-full w-full items-center justify-center">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      sizes="210px"
-                      className="object-contain"
-                    />
+          <div className="flex flex-nowrap w-full overflow-hidden select-none">
+            {[0, 1, 2, 3].map((trackIdx) => (
+              <div
+                key={`r1-track-${trackIdx}`}
+                className="client-marquee-track-left flex shrink-0 items-center gap-10 sm:gap-14 pr-10 sm:pr-14"
+                aria-hidden={trackIdx > 0 ? "true" : undefined}
+              >
+                {row1Logos.map((client, idx) => (
+                  <div
+                    key={`r1-${trackIdx}-${client.name}-${idx}`}
+                    className="flex h-12 sm:h-14 w-[130px] sm:w-[160px] shrink-0 items-center justify-center"
+                    title={client.name}
+                  >
+                    <div className="relative h-8 sm:h-10 w-full flex items-center justify-center">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        fill
+                        sizes="(max-width: 640px) 130px, 160px"
+                        className="object-contain"
+                        loading="eager"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            ))}
           </div>
 
           {/* Baris Kedua: Bergerak ke arah sebaliknya (Kiri ke Kanan) */}
-          <div className="relative w-full overflow-hidden">
-            <div className="client-marquee-right flex gap-3.5 sm:gap-4.5 hover:[animation-play-state:paused]">
-              {duplicatedRow2.map((client, idx) => (
-                <div
-                  key={`r2-${client.name}-${idx}`}
-                  className="flex h-[76px] sm:h-[86px] w-[180px] sm:w-[210px] shrink-0 items-center justify-center rounded-2xl border border-slate-200/90 bg-white px-5 py-3 shadow-[0_2px_8px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-0.5 hover:border-blue-400 hover:shadow-md"
-                  title={client.name}
-                >
-                  <div className="relative flex h-full w-full items-center justify-center">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      sizes="210px"
-                      className="object-contain"
-                    />
+          <div className="flex flex-nowrap w-full overflow-hidden select-none">
+            {[0, 1, 2, 3].map((trackIdx) => (
+              <div
+                key={`r2-track-${trackIdx}`}
+                className="client-marquee-track-right flex shrink-0 items-center gap-10 sm:gap-14 pr-10 sm:pr-14"
+                aria-hidden={trackIdx > 0 ? "true" : undefined}
+              >
+                {row2Logos.map((client, idx) => (
+                  <div
+                    key={`r2-${trackIdx}-${client.name}-${idx}`}
+                    className="flex h-12 sm:h-14 w-[130px] sm:w-[160px] shrink-0 items-center justify-center"
+                    title={client.name}
+                  >
+                    <div className="relative h-8 sm:h-10 w-full flex items-center justify-center">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        fill
+                        sizes="(max-width: 640px) 130px, 160px"
+                        className="object-contain"
+                        loading="eager"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Bottom Trust Highlights */}
-      <div className="container-page mt-10 sm:mt-12">
+      <div className="container-page mt-12 sm:mt-14">
         <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 text-center">
           <div className="rounded-xl border border-blue-100 bg-white p-3.5 sm:p-4 shadow-xs">
             <span className="text-xl sm:text-2xl font-black text-[#2563EB]">12+ Tahun</span>
