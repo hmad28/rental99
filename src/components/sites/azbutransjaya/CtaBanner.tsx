@@ -34,7 +34,7 @@ export function CtaBanner() {
                 </div>
 
                 <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-white sm:text-3xl lg:text-4xl leading-tight">
-                  Siap Menjelajahi Lombok
+                  Siap Menjelajahi Lombok{" "}
                   <br className="hidden sm:inline" />
                   Bersama Rental99?
                 </h2>

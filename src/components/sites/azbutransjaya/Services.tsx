@@ -33,7 +33,7 @@ export function Services() {
               </div>
 
               <h2 className="mt-3.5 text-2xl font-extrabold tracking-tight text-[#0F172A] sm:text-3xl lg:text-4xl leading-tight break-words">
-                Solusi Transportasi
+                Solusi Transportasi{" "}
                 <br className="hidden sm:inline" />
                 Terpercaya di Lombok
               </h2>
