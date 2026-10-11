@@ -147,14 +147,14 @@
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: clientMarqueeLeft 36s linear infinite;
+  animation: clientMarqueeLeft 45s linear infinite;
 }
 
 .client-marquee-right {
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: clientMarqueeRight 38s linear infinite;
+  animation: clientMarqueeRight 48s linear infinite;
 }
 
 .client-marquee-left:hover,
