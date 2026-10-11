@@ -86,7 +86,7 @@ export function FleetCatalog() {
             return (
               <Reveal key={car.name} delay={idx * 0.04}>
                 <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-2.5 sm:p-4 shadow-xs transition duration-200 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
-                  {/* Dominant Vehicle Image - Square 1:1 */}
+                  {/* Dominant Vehicle Image - Square 1:1 Clean */}
                   <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-slate-100">
                     <Image
                       src={car.image}
@@ -95,16 +95,6 @@ export function FleetCatalog() {
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-
-                    {/* Secondary Category / Feature Badge - Repositioned to top-right with safe margins */}
-                    {car.badge && (
-                      <span
-                        className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 z-10 max-w-[70%] truncate rounded-md bg-[#2563EB]/95 px-2 py-0.5 text-[9px] sm:text-[10px] font-bold text-white shadow-xs backdrop-blur-xs"
-                        title={car.badge}
-                      >
-                        {car.badge}
-                      </span>
-                    )}
                   </div>
 
                   {/* Card Content - Compact & Clean */}
