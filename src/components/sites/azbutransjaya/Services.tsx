@@ -32,13 +32,13 @@ export function Services() {
                 <span>Layanan Utama</span>
               </div>
 
-              <h2 className="mt-3.5 text-2xl font-extrabold tracking-tight text-[#0F172A] sm:text-3xl lg:text-4xl leading-tight">
+              <h2 className="mt-3.5 text-2xl font-extrabold tracking-tight text-[#0F172A] sm:text-3xl lg:text-4xl leading-tight break-words">
                 Solusi Transportasi
                 <br className="hidden sm:inline" />
                 Terpercaya di Lombok
               </h2>
 
-              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-[#64748B]">
+              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-[#64748B] break-words">
                 Rental99 siap melayani berbagai kebutuhan mobilitas Anda dengan unit bersih, supir berpengalaman, dan layanan tepat waktu di seluruh Lombok hingga rute luar pulau.
               </p>
 
@@ -47,7 +47,7 @@ export function Services() {
                   href={whatsappUrl("Halo Rental99, saya lihat di website Rental99 dan ingin konsultasi layanan transportasi di Lombok.")}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex max-w-full items-center justify-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-xs sm:text-sm font-bold text-white shadow-xs transition hover:bg-[#1D4ED8] hover:shadow-md active:scale-[0.98]"
+                  className="inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-xs sm:text-sm font-bold text-white shadow-xs transition hover:bg-[#1D4ED8] hover:shadow-md active:scale-[0.98]"
                 >
                   <MessageCircle className="size-4 shrink-0" />
                   <span className="truncate">Konsultasi Layanan via WA</span>
@@ -76,7 +76,7 @@ export function Services() {
                         </div>
 
                         {/* Judul bold & Subjudul singkat */}
-                        <div className="min-w-0 flex-1">
+                        <div className="min-w-0 flex-1 overflow-hidden">
                           <h3 className="truncate text-sm font-bold text-[#0F172A] transition group-hover:text-[#2563EB] sm:text-base">
                             {srv.title}
                           </h3>

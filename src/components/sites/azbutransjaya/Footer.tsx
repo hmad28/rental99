@@ -79,15 +79,15 @@ export function Footer() {
         </div>
       </footer>
 
-      {/* Floating mobile WhatsApp FAB */}
+      {/* Floating mobile WhatsApp FAB - Compact & Safe Margins */}
       <a
         href={whatsappUrl()}
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-[calc(20px+env(safe-area-inset-bottom))] right-4 z-40 flex size-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-emerald-950/30 transition-transform duration-200 hover:scale-105 active:scale-95 md:hidden"
+        className="fixed bottom-[calc(14px+env(safe-area-inset-bottom))] right-3.5 z-40 flex size-10 sm:size-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-emerald-950/25 border border-white/20 transition-transform duration-200 hover:scale-105 active:scale-95 md:hidden"
         aria-label="Chat WhatsApp Rental99"
       >
-        <MessageCircle className="size-6 text-white shrink-0" />
+        <MessageCircle className="size-5 sm:size-5.5 text-white shrink-0" />
         <span className="sr-only">Chat WhatsApp Rental99</span>
       </a>
     </>
