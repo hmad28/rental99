@@ -27,19 +27,22 @@ export function FleetCatalog() {
       : filteredCars;
 
   return (
-    <section id="armada" className="relative overflow-hidden bg-[#F8FAFC] py-16 sm:py-20 lg:py-24 border-b border-[#E2E8F0]">
-      <div className="container-page">
+    <section id="armada" className="relative overflow-hidden bg-gradient-to-b from-[#F0F7FF]/50 via-white to-white py-16 sm:py-20 lg:py-24 border-b border-blue-100/60">
+      {/* Subtle Ambient Sky Glow */}
+      <div className="pointer-events-none absolute -top-32 right-1/4 h-80 w-80 rounded-full bg-sky-200/25 blur-3xl" aria-hidden="true" />
+
+      <div className="container-page relative z-10">
         {/* Section Header - Clean & Conversion-Focused */}
         <div className="mx-auto max-w-2xl text-center mb-10 sm:mb-12">
           <Reveal>
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold text-[#2563EB]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50/90 px-3.5 py-1 text-xs font-bold text-[#2563EB] shadow-2xs">
               <Sparkles className="size-3.5" />
               <span>Pilihan Armada Terawat</span>
             </div>
             <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#0F172A] sm:text-3xl lg:text-4xl">
               Armada Unggulan Rental99
             </h2>
-            <p className="mt-2.5 text-xs sm:text-sm text-[#64748B]">
+            <p className="mt-2.5 text-xs sm:text-sm text-[#475569]">
               Tersedia 12 pilihan unit prima untuk perjalanan Anda di Lombok. Seluruh harga sudah termasuk layanan supir profesional dan BBM.
             </p>
           </Reveal>

@@ -10,15 +10,15 @@ export function CtaBanner() {
     <section id="kontak" className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
       <div className="container-page">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#071321] via-[#0A192F] to-[#10274A] p-8 sm:p-12 lg:p-16 text-white shadow-xl shadow-slate-900/10">
-            {/* Subtle Radial Glow */}
-            <div className="pointer-events-none absolute -right-24 -top-24 size-96 rounded-full bg-blue-600/20 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-24 -left-24 size-96 rounded-full bg-blue-500/15 blur-3xl" />
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0A2244] via-[#1E40AF] to-[#2563EB] p-8 sm:p-12 lg:p-16 text-white shadow-2xl shadow-blue-900/20">
+            {/* Luminous Ambient Glows */}
+            <div className="pointer-events-none absolute -right-20 -top-20 size-96 rounded-full bg-sky-300/30 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 -left-20 size-96 rounded-full bg-blue-300/20 blur-3xl" />
 
             <div className="grid gap-8 lg:grid-cols-12 lg:items-center relative z-10">
               <div className="lg:col-span-7">
-                <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-400/30 bg-blue-500/10 px-3.5 py-1 text-xs font-bold text-blue-300">
-                  <Sparkles className="size-3.5 text-blue-400" />
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/15 px-3.5 py-1 text-xs font-bold text-white shadow-xs backdrop-blur-xs">
+                  <Sparkles className="size-3.5 text-sky-200" />
                   <span>Mulai Perjalanan Anda</span>
                 </div>
 

@@ -35,11 +35,21 @@ export function Hero() {
           />
         </div>
 
+        {/* Soft bright ambient light overlay on the left to make hero vibrant & sunlit */}
+        <div
+          className="pointer-events-none absolute inset-y-0 left-0 w-3/5 bg-gradient-to-r from-white via-white/80 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -left-16 top-10 h-72 w-72 rounded-full bg-sky-200/40 blur-3xl"
+          aria-hidden="true"
+        />
+
         {/* Desktop Hero Content Overlay */}
         <div className="container-page relative z-10 flex min-h-[640px] lg:min-h-[700px] xl:min-h-[740px] items-center">
           <motion.div className="max-w-[560px] lg:max-w-[620px] py-16 lg:py-20" {...animFadeUp}>
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-white/80 px-3.5 py-1 text-xs font-bold text-[#2563EB] shadow-2xs backdrop-blur-xs">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/90 px-3.5 py-1 text-xs font-bold text-[#2563EB] shadow-xs backdrop-blur-xs">
               <span>Rental99 • Transport Service &amp; Tours</span>
             </div>
 
@@ -49,9 +59,15 @@ export function Hero() {
               <span className="block text-[#2563EB]">BIZAM Lombok</span>
             </h1>
 
+            {/* Beroperasi sejak 2012 - Posisikan tepat di bawah tulisan BIZAM */}
+            <div className="mt-3.5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/95 px-3.5 py-1 text-xs font-bold text-[#1D4ED8] shadow-xs backdrop-blur-xs">
+              <span className="size-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Beroperasi sejak 2012</span>
+            </div>
+
             {/* Description */}
-            <p className="mt-4 max-w-lg text-sm lg:text-base leading-relaxed text-[#475569] font-medium">
-              Transportasi terpercaya sejak tahun 2012 di Lombok. Pilihan 12 armada prima lengkap{" "}
+            <p className="mt-4 max-w-lg text-sm lg:text-base leading-relaxed text-[#334155] font-medium">
+              Layanan transportasi rental mobil profesional di Lombok. Pilihan 12 armada prima lengkap{" "}
               <strong className="text-[#0F172A]">Include Driver + BBM + Air Mineral</strong> untuk airport transfer BIZAM, city tour, Sasak &amp; Gili.
             </p>
 
@@ -61,7 +77,7 @@ export function Hero() {
                 href={whatsappUrl()}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/25 transition hover:bg-[#1D4ED8] hover:shadow-xl hover:shadow-blue-600/30 active:scale-[0.98]"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/30 transition hover:bg-[#1D4ED8] hover:shadow-xl hover:shadow-blue-600/40 active:scale-[0.98]"
               >
                 <MessageCircle className="size-4" />
                 <span>Booking via WhatsApp</span>
@@ -69,7 +85,7 @@ export function Hero() {
 
               <a
                 href="#armada"
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white/90 px-6 py-3.5 text-sm font-bold text-[#0F172A] shadow-xs backdrop-blur-xs transition hover:border-blue-400 hover:text-[#2563EB] hover:bg-white active:scale-[0.98]"
+                className="inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-white/95 px-6 py-3.5 text-sm font-bold text-[#0F172A] shadow-xs backdrop-blur-xs transition hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-white active:scale-[0.98]"
               >
                 <CarFront className="size-4" />
                 <span>Lihat Armada</span>
@@ -78,17 +94,17 @@ export function Hero() {
 
             {/* Trust Pills */}
             <div className="mt-8 flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-700">
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white/85 px-3 py-1.5 shadow-2xs backdrop-blur-xs">
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-blue-100 bg-white/95 px-3 py-1.5 shadow-xs backdrop-blur-xs">
                 <ShieldCheck className="size-3.5 text-[#2563EB]" />
                 Driver + BBM + Mineral
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white/85 px-3 py-1.5 shadow-2xs backdrop-blur-xs">
-                <Award className="size-3.5 text-[#2563EB]" />
-                Terpercaya Sejak 2012
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white/85 px-3 py-1.5 shadow-2xs backdrop-blur-xs">
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-blue-100 bg-white/95 px-3 py-1.5 shadow-xs backdrop-blur-xs">
                 <MapPin className="size-3.5 text-[#2563EB]" />
                 Standby BIZAM Lombok
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-blue-100 bg-white/95 px-3 py-1.5 shadow-xs backdrop-blur-xs">
+                <Award className="size-3.5 text-[#2563EB]" />
+                12+ Pilihan Armada Prima
               </span>
             </div>
           </motion.div>
@@ -112,9 +128,13 @@ export function Hero() {
           />
         </div>
 
-        {/* Soft white-to-transparent gradient overlay behind text area only (upper 48%) */}
+        {/* Soft white-to-transparent gradient overlay behind text area only (upper 50%) - bright and fresh */}
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-[48%] max-w-full bg-gradient-to-b from-white/95 via-white/80 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-[50%] max-w-full bg-gradient-to-b from-white via-white/90 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -top-12 -left-12 h-64 w-64 rounded-full bg-sky-200/35 blur-3xl"
           aria-hidden="true"
         />
 
@@ -137,8 +157,14 @@ export function Hero() {
               <span className="block text-[#2563EB]">BIZAM Lombok</span>
             </h1>
 
+            {/* Beroperasi sejak 2012 - Posisikan tepat di bawah tulisan BIZAM */}
+            <div className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-white/95 px-2.5 py-0.5 text-[11px] font-bold text-[#1D4ED8] shadow-xs backdrop-blur-xs">
+              <span className="size-1.5 rounded-full bg-emerald-500" />
+              <span>Beroperasi sejak 2012</span>
+            </div>
+
             {/* Short Supporting Sentence */}
-            <p className="mt-3 text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal max-w-[310px]">
+            <p className="mt-2.5 text-xs sm:text-[13px] text-slate-700 leading-relaxed font-medium max-w-[310px]">
               Armada terawat lengkap include driver, BBM &amp; mineral siap di Bandara BIZAM.
             </p>
 
@@ -148,7 +174,7 @@ export function Hero() {
                 href={whatsappUrl()}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-10 items-center justify-center gap-1.5 rounded-xl bg-[#2563EB] px-4 text-xs font-bold text-white shadow-md shadow-blue-600/25 transition active:scale-[0.98]"
+                className="inline-flex h-10 items-center justify-center gap-1.5 rounded-xl bg-[#2563EB] px-4 text-xs font-bold text-white shadow-md shadow-blue-600/30 transition active:scale-[0.98]"
               >
                 <MessageCircle className="size-3.5" />
                 <span>Booking via WA</span>
@@ -164,9 +190,9 @@ export function Hero() {
             </div>
 
             {/* Compact Trust Line with sufficient spacing below CTA */}
-            <div className="mt-4 sm:mt-5 flex items-center gap-2 text-[11px] font-medium text-slate-500">
+            <div className="mt-4 sm:mt-5 flex items-center gap-2 text-[11px] font-medium text-slate-600">
               <span className="size-1.5 rounded-full bg-emerald-500 shrink-0" />
-              <span>Include Driver + BBM • Air Mineral • Sejak 2012</span>
+              <span>Include Driver + BBM • Air Mineral • Standby BIZAM</span>
             </div>
           </div>
 

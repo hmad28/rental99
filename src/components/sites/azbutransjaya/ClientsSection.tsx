@@ -16,13 +16,13 @@ export function ClientsSection() {
   const duplicatedCol2 = [...col2Logos, ...col2Logos];
 
   return (
-    <section id="klien" className="relative overflow-hidden bg-[#F8FAFC] py-16 sm:py-20 lg:py-24 border-b border-[#E2E8F0]">
+    <section id="klien" className="relative overflow-hidden bg-gradient-to-b from-[#F0F7FF]/40 via-white to-white py-16 sm:py-20 lg:py-24 border-b border-blue-100/60">
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
           {/* Sisi Kiri: Headline & Teks Singkat Sesuai Arahan Client */}
           <div className="lg:col-span-5">
             <Reveal>
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold text-[#2563EB]">
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50/90 px-3.5 py-1 text-xs font-bold text-[#2563EB] shadow-2xs">
                 <Award className="size-3.5" />
                 <span>Transportasi terpercaya sejak tahun 2012</span>
               </div>
@@ -31,13 +31,13 @@ export function ClientsSection() {
                 Klien Kami
               </h2>
 
-              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-[#64748B]">
+              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-[#475569]">
                 Rental99 telah dipercaya oleh instansi kementerian, BUMN, korporasi nasional, dan ribuan pelanggan untuk layanan transportasi yang andal, aman, dan tepat waktu di Lombok.
               </p>
 
               {/* Trust Metric Highlights */}
               <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 max-w-sm">
-                <div className="rounded-xl border border-slate-200 bg-white p-3.5 shadow-xs">
+                <div className="rounded-xl border border-blue-100 bg-white p-3.5 shadow-xs">
                   <div className="flex items-center gap-1.5 text-lg font-black text-[#2563EB]">
                     <ShieldCheck className="size-4" />
                     <span>12+ Tahun</span>
@@ -46,7 +46,7 @@ export function ClientsSection() {
                     Pengalaman Melayani
                   </p>
                 </div>
-                <div className="rounded-xl border border-slate-200 bg-white p-3.5 shadow-xs">
+                <div className="rounded-xl border border-blue-100 bg-white p-3.5 shadow-xs">
                   <div className="flex items-center gap-1.5 text-lg font-black text-[#2563EB]">
                     <CheckCircle2 className="size-4 text-emerald-600" />
                     <span>13+ Mitra</span>
@@ -75,7 +75,7 @@ export function ClientsSection() {
                       {duplicatedCol1.map((client, idx) => (
                         <div
                           key={`col1-${client.name}-${idx}`}
-                          className="flex h-16 sm:h-20 items-center justify-center rounded-xl border border-slate-100 bg-slate-50/70 p-3 sm:p-4 shadow-2xs transition duration-200 hover:border-blue-300 hover:bg-white hover:shadow-sm"
+                          className="flex h-16 sm:h-20 items-center justify-center rounded-xl border border-slate-200/80 bg-white p-3 sm:p-4 shadow-2xs transition duration-200 hover:border-blue-400 hover:shadow-sm"
                           title={client.name}
                         >
                           <div className="relative h-9 sm:h-11 w-full flex items-center justify-center">
@@ -84,7 +84,7 @@ export function ClientsSection() {
                               alt={client.name}
                               fill
                               sizes="(min-width: 1024px) 180px, 140px"
-                              className="object-contain filter grayscale opacity-75 transition duration-300 hover:filter-none hover:opacity-100"
+                              className="object-contain filter grayscale opacity-80 transition duration-300 hover:filter-none hover:opacity-100"
                             />
                           </div>
                         </div>
@@ -98,7 +98,7 @@ export function ClientsSection() {
                       {duplicatedCol2.map((client, idx) => (
                         <div
                           key={`col2-${client.name}-${idx}`}
-                          className="flex h-16 sm:h-20 items-center justify-center rounded-xl border border-slate-100 bg-slate-50/70 p-3 sm:p-4 shadow-2xs transition duration-200 hover:border-blue-300 hover:bg-white hover:shadow-sm"
+                          className="flex h-16 sm:h-20 items-center justify-center rounded-xl border border-slate-200/80 bg-white p-3 sm:p-4 shadow-2xs transition duration-200 hover:border-blue-400 hover:shadow-sm"
                           title={client.name}
                         >
                           <div className="relative h-9 sm:h-11 w-full flex items-center justify-center">
