@@ -9,12 +9,12 @@ interface RevealProps {
   delay?: number;
 }
 
-export function Reveal({ children, className, delay = 0 }: RevealProps) {
+export function Reveal({ children, className = "", delay = 0 }: RevealProps) {
   const shouldReduceMotion = useReducedMotion();
 
   return (
     <motion.div
-      className={className}
+      className={`w-full max-w-full min-w-0 ${className}`}
       initial={!shouldReduceMotion ? { opacity: 0, y: 20 } : false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}

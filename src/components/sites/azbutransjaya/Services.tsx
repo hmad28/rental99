@@ -21,11 +21,11 @@ export function Services() {
   };
 
   return (
-    <section id="layanan" className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24 border-b border-[#E2E8F0]">
-      <div className="container-page">
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+    <section id="layanan" className="relative w-full max-w-full overflow-hidden bg-white py-16 sm:py-20 lg:py-24 border-b border-[#E2E8F0]">
+      <div className="container-page w-full max-w-full min-w-0">
+        <div className="grid w-full max-w-full min-w-0 gap-10 lg:grid-cols-12 lg:items-center">
           {/* Sisi Kiri: Header & Deskripsi Singkat */}
-          <div className="lg:col-span-5">
+          <div className="w-full max-w-full min-w-0 lg:col-span-5">
             <Reveal>
               <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold text-[#2563EB]">
                 <Layers className="size-3.5" />
@@ -47,40 +47,40 @@ export function Services() {
                   href={whatsappUrl("Halo Rental99, saya lihat di website Rental99 dan ingin konsultasi layanan transportasi di Lombok.")}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-xs sm:text-sm font-bold text-white shadow-xs transition hover:bg-[#1D4ED8] hover:shadow-md active:scale-[0.98]"
+                  className="inline-flex max-w-full items-center justify-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-xs sm:text-sm font-bold text-white shadow-xs transition hover:bg-[#1D4ED8] hover:shadow-md active:scale-[0.98]"
                 >
-                  <MessageCircle className="size-4" />
-                  <span>Konsultasi Layanan via WA</span>
+                  <MessageCircle className="size-4 shrink-0" />
+                  <span className="truncate">Konsultasi Layanan via WA</span>
                 </a>
               </div>
             </Reveal>
           </div>
 
           {/* Sisi Kanan: Satu Card Putih Clean Berisi 4 Layanan Layout Vertikal */}
-          <div className="lg:col-span-7">
+          <div className="w-full max-w-full min-w-0 lg:col-span-7">
             <Reveal delay={0.1}>
-              <div className="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-xs transition duration-200 hover:shadow-md">
-                <div className="divide-y divide-slate-100">
+              <div className="w-full max-w-full min-w-0 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-xs transition duration-200 hover:shadow-md">
+                <div className="w-full divide-y divide-slate-100">
                   {SERVICES_DATA.map((srv) => (
                     <a
                       key={srv.id}
                       href={whatsappUrl(`Halo Rental99, saya lihat di website Rental99, saya ingin menanyakan informasi mengenai layanan "${srv.title}".`)}
                       target="_blank"
                       rel="noreferrer"
-                      className="group flex items-center justify-between p-4 sm:p-5 transition hover:bg-blue-50/40"
+                      className="group flex w-full max-w-full min-w-0 items-center justify-between gap-3 p-3.5 sm:p-5 transition hover:bg-blue-50/40"
                     >
-                      <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                      <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
                         {/* Icon kecil dengan aksen biru lembut */}
-                        <div className="grid size-10 sm:size-11 shrink-0 place-items-center rounded-xl bg-blue-50 transition group-hover:bg-blue-100/80">
+                        <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-blue-50 transition group-hover:bg-blue-100/80 sm:size-11">
                           {getIcon(srv.iconType)}
                         </div>
 
-                        {/* Judul bold & Subjudul singkat 1 baris */}
-                        <div className="min-w-0">
-                          <h3 className="text-sm sm:text-base font-bold text-[#0F172A] group-hover:text-[#2563EB] transition truncate">
+                        {/* Judul bold & Subjudul singkat */}
+                        <div className="min-w-0 flex-1">
+                          <h3 className="truncate text-sm font-bold text-[#0F172A] transition group-hover:text-[#2563EB] sm:text-base">
                             {srv.title}
                           </h3>
-                          <p className="mt-0.5 text-xs text-[#64748B] truncate">
+                          <p className="mt-0.5 line-clamp-1 text-xs text-[#64748B] sm:line-clamp-none">
                             {srv.subtitle}
                           </p>
                         </div>

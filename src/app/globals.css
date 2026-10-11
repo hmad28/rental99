@@ -221,3 +221,9 @@ footer {
   }
 }
 
+/* Neutralize legacy floating pill styles */
+.mobile-whatsapp {
+  display: none !important;
+}
+
+

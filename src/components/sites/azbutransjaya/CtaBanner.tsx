@@ -10,15 +10,26 @@ export function CtaBanner() {
     <section id="kontak" className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
       <div className="container-page">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0A2244] via-[#1E40AF] to-[#2563EB] p-8 sm:p-12 lg:p-16 text-white shadow-2xl shadow-blue-900/20">
-            {/* Luminous Ambient Glows */}
-            <div className="pointer-events-none absolute -right-20 -top-20 size-96 rounded-full bg-sky-300/30 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-20 -left-20 size-96 rounded-full bg-blue-300/20 blur-3xl" />
+          <div className="relative overflow-hidden rounded-3xl bg-[#071F42] p-8 sm:p-12 lg:p-16 text-white shadow-2xl shadow-blue-900/30">
+            {/* Background Image: cta-bg.png */}
+            <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+              <Image
+                src="/images/cta-bg.png"
+                alt="Rental99 Lombok Transport Service & Tours"
+                fill
+                sizes="(min-width: 1024px) 1200px, 100vw"
+                className="object-cover object-right md:object-center"
+              />
+              {/* Soft overlay on left side to guarantee high contrast text legibility */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#071F42]/95 via-[#071F42]/85 to-transparent lg:w-3/5" />
+              {/* Bottom edge fade on mobile */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071F42]/70 via-transparent to-transparent md:hidden" />
+            </div>
 
             <div className="grid gap-8 lg:grid-cols-12 lg:items-center relative z-10">
               <div className="lg:col-span-7">
                 <div className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/15 px-3.5 py-1 text-xs font-bold text-white shadow-xs backdrop-blur-xs">
-                  <Sparkles className="size-3.5 text-sky-200" />
+                  <Sparkles className="size-3.5 text-sky-300" />
                   <span>Mulai Perjalanan Anda</span>
                 </div>
 
@@ -28,7 +39,7 @@ export function CtaBanner() {
                   Bersama Rental99?
                 </h2>
 
-                <p className="mt-3 max-w-xl text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="mt-3 max-w-xl text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
                   Konsultasikan jadwal kedatangan di BIZAM Lombok dan armada impian Anda. Tim kami siap merespons dengan cepat dan ramah 24/7.
                 </p>
 
@@ -37,7 +48,7 @@ export function CtaBanner() {
                     href={whatsappUrl()}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-lg shadow-blue-600/30 transition hover:bg-[#1D4ED8] hover:shadow-xl active:scale-[0.98]"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-lg shadow-blue-600/40 transition hover:bg-[#1D4ED8] hover:shadow-xl active:scale-[0.98]"
                   >
                     <MessageCircle className="size-4" />
                     <span>Booking via WhatsApp</span>
@@ -45,9 +56,9 @@ export function CtaBanner() {
 
                   <a
                     href={`tel:${PHONE_NUMBER}`}
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 text-xs sm:text-sm font-bold text-white transition hover:bg-white/10 hover:border-white/30"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-3.5 text-xs sm:text-sm font-bold text-white backdrop-blur-xs transition hover:bg-white/20 hover:border-white/50"
                   >
-                    <PhoneCall className="size-4 text-slate-300" />
+                    <PhoneCall className="size-4 text-sky-200" />
                     <span>Telepon Langsung</span>
                   </a>
                 </div>
