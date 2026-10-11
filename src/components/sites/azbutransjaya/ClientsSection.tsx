@@ -14,8 +14,45 @@ export function ClientsSection() {
       id="klien"
       className="relative w-full max-w-full overflow-hidden bg-white py-16 sm:py-20 lg:py-24 border-b border-slate-100"
     >
+      {/* Inline Scoped Styles: Prevents CSS minifiers from mangling translate3d keyframes */}
+      <style>{`
+        @keyframes clientMarqueeScrollLeft {
+          0% {
+            transform: translate3d(0px, 0px, 0px);
+          }
+          100% {
+            transform: translate3d(-100%, 0px, 0px);
+          }
+        }
+
+        @keyframes clientMarqueeScrollRight {
+          0% {
+            transform: translate3d(-100%, 0px, 0px);
+          }
+          100% {
+            transform: translate3d(0px, 0px, 0px);
+          }
+        }
+
+        .client-marquee-track-left {
+          display: flex !important;
+          flex-shrink: 0 !important;
+          width: max-content !important;
+          will-change: transform;
+          animation: clientMarqueeScrollLeft 32s linear infinite !important;
+        }
+
+        .client-marquee-track-right {
+          display: flex !important;
+          flex-shrink: 0 !important;
+          width: max-content !important;
+          will-change: transform;
+          animation: clientMarqueeScrollRight 34s linear infinite !important;
+        }
+      `}</style>
+
       {/* Section Header */}
-      <div className="container-page mb-10 sm:mb-14 text-center">
+      <div className="container-page mb-12 sm:mb-16 text-center">
         <Reveal>
           {/* Claim badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/90 px-4 py-1.5 text-xs font-bold text-[#2563EB] shadow-xs">
@@ -34,18 +71,18 @@ export function ClientsSection() {
       </div>
 
       {/* 2-Row Horizontal Infinite Marquee Ticker */}
-      <div className="relative w-full max-w-full overflow-hidden py-2">
+      <div className="relative w-full max-w-full overflow-hidden py-4">
         {/* Soft Left & Right Edge Gradient Fades for Smooth Seamless Transition */}
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-14 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent"
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-32 bg-gradient-to-r from-white via-white/80 to-transparent"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-14 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent"
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-32 bg-gradient-to-l from-white via-white/80 to-transparent"
           aria-hidden="true"
         />
 
-        <div className="flex flex-col gap-6 sm:gap-8 overflow-hidden">
+        <div className="flex flex-col gap-7 sm:gap-10 overflow-hidden">
           {/* Baris Pertama: Bergerak terus ke satu arah (Kanan ke Kiri) */}
           <div className="flex flex-nowrap w-full overflow-hidden select-none">
             {[0, 1, 2, 3].map((trackIdx) => (
@@ -104,28 +141,6 @@ export function ClientsSection() {
                 ))}
               </div>
             ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Trust Highlights */}
-      <div className="container-page mt-12 sm:mt-14">
-        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 text-center">
-          <div className="rounded-xl border border-blue-100 bg-white p-3.5 sm:p-4 shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-[#2563EB]">12+ Tahun</span>
-            <span className="block mt-1 text-[11px] sm:text-xs font-semibold text-slate-600">Pengalaman Melayani</span>
-          </div>
-          <div className="rounded-xl border border-blue-100 bg-white p-3.5 sm:p-4 shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-[#2563EB]">13+ Mitra</span>
-            <span className="block mt-1 text-[11px] sm:text-xs font-semibold text-slate-600">BUMN &amp; Korporasi</span>
-          </div>
-          <div className="rounded-xl border border-blue-100 bg-white p-3.5 sm:p-4 shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-[#2563EB]">12 Unit</span>
-            <span className="block mt-1 text-[11px] sm:text-xs font-semibold text-slate-600">Armada Siap Jalan</span>
-          </div>
-          <div className="rounded-xl border border-blue-100 bg-white p-3.5 sm:p-4 shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-[#2563EB]">24 Jam</span>
-            <span className="block mt-1 text-[11px] sm:text-xs font-semibold text-slate-600">Standby di BIZAM</span>
           </div>
         </div>
       </div>
