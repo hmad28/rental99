@@ -96,9 +96,12 @@ export function FleetCatalog() {
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
 
-                    {/* Badge */}
+                    {/* Secondary Category / Feature Badge - Repositioned to top-right with safe margins */}
                     {car.badge && (
-                      <span className="absolute left-2 top-2 z-10 rounded-md bg-[#2563EB]/95 px-2 py-0.5 text-[9px] font-bold text-white shadow-xs backdrop-blur-xs">
+                      <span
+                        className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 z-10 max-w-[70%] truncate rounded-md bg-[#2563EB]/95 px-2 py-0.5 text-[9px] sm:text-[10px] font-bold text-white shadow-xs backdrop-blur-xs"
+                        title={car.badge}
+                      >
                         {car.badge}
                       </span>
                     )}

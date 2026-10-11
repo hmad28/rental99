@@ -6,32 +6,32 @@ import { CLIENTS_DATA } from "./constants";
 import { Reveal } from "./Reveal";
 
 export function ClientsSection() {
-  // Split logos into 2 columns
+  // Split logos into 2 rows for 2 horizontal marquee tracks
   const half = Math.ceil(CLIENTS_DATA.length / 2);
-  const col1Logos = CLIENTS_DATA.slice(0, half);
-  const col2Logos = CLIENTS_DATA.slice(half);
+  const row1Logos = CLIENTS_DATA.slice(0, half);
+  const row2Logos = CLIENTS_DATA.slice(half);
 
-  // Duplicate each column for a seamless infinite loop
-  const duplicatedCol1 = [...col1Logos, ...col1Logos];
-  const duplicatedCol2 = [...col2Logos, ...col2Logos];
+  // Duplicate each row for a seamless, continuous infinite loop
+  const duplicatedRow1 = [...row1Logos, ...row1Logos];
+  const duplicatedRow2 = [...row2Logos, ...row2Logos];
 
   return (
-    <section id="klien" className="relative overflow-hidden bg-gradient-to-b from-[#F0F7FF]/40 via-white to-white py-16 sm:py-20 lg:py-24 border-b border-blue-100/60">
-      <div className="container-page">
+    <section id="klien" className="relative w-full max-w-full overflow-hidden bg-gradient-to-b from-[#F0F7FF]/40 via-white to-white py-16 sm:py-20 lg:py-24 border-b border-blue-100/60">
+      <div className="container-page w-full max-w-full min-w-0">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-          {/* Sisi Kiri: Headline & Teks Singkat Sesuai Arahan Client */}
-          <div className="lg:col-span-5">
+          {/* Sisi Kiri: Headline, Deskripsi Singkat & Statistik (35–40% desktop) */}
+          <div className="w-full min-w-0 lg:col-span-5">
             <Reveal>
               <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50/90 px-3.5 py-1 text-xs font-bold text-[#2563EB] shadow-2xs">
-                <Award className="size-3.5" />
+                <Award className="size-3.5 shrink-0" />
                 <span>Transportasi terpercaya sejak tahun 2012</span>
               </div>
 
-              <h2 className="mt-3.5 text-2xl font-extrabold tracking-tight text-[#0F172A] sm:text-3xl lg:text-4xl leading-tight">
+              <h2 className="mt-3.5 text-2xl font-extrabold tracking-tight text-[#0F172A] sm:text-3xl lg:text-4xl leading-tight break-words">
                 Klien Kami
               </h2>
 
-              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-[#475569]">
+              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-[#475569] break-words">
                 Rental99 telah dipercaya oleh instansi kementerian, BUMN, korporasi nasional, dan ribuan pelanggan untuk layanan transportasi yang andal, aman, dan tepat waktu di Lombok.
               </p>
 
@@ -39,7 +39,7 @@ export function ClientsSection() {
               <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 max-w-sm">
                 <div className="rounded-xl border border-blue-100 bg-white p-3.5 shadow-xs">
                   <div className="flex items-center gap-1.5 text-lg font-black text-[#2563EB]">
-                    <ShieldCheck className="size-4" />
+                    <ShieldCheck className="size-4 shrink-0" />
                     <span>12+ Tahun</span>
                   </div>
                   <p className="mt-0.5 text-[11px] font-medium text-slate-500">
@@ -48,7 +48,7 @@ export function ClientsSection() {
                 </div>
                 <div className="rounded-xl border border-blue-100 bg-white p-3.5 shadow-xs">
                   <div className="flex items-center gap-1.5 text-lg font-black text-[#2563EB]">
-                    <CheckCircle2 className="size-4 text-emerald-600" />
+                    <CheckCircle2 className="size-4 shrink-0 text-emerald-600" />
                     <span>13+ Mitra</span>
                   </div>
                   <p className="mt-0.5 text-[11px] font-medium text-slate-500">
@@ -59,32 +59,37 @@ export function ClientsSection() {
             </Reveal>
           </div>
 
-          {/* Sisi Kanan: Logo-logo Client dalam 2 Kolom Infinite Scroll Vertikal */}
-          <div className="lg:col-span-7">
+          {/* Sisi Kanan: Area Infinite Marquee 2 Baris Horizontal (60–65% desktop, stack vertical di mobile) */}
+          <div className="w-full min-w-0 lg:col-span-7">
             <Reveal delay={0.1}>
-              <div className="relative h-[360px] sm:h-[420px] lg:h-[440px] overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-3 sm:p-4 shadow-xs">
-                {/* Top and Bottom Gradient Fades for Smooth Transition */}
-                <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-16 sm:h-20 bg-gradient-to-b from-white via-white/80 to-transparent" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-16 sm:h-20 bg-gradient-to-t from-white via-white/80 to-transparent" />
+              <div className="relative w-full overflow-hidden rounded-3xl border border-slate-200/80 bg-slate-50/50 py-5 sm:py-6 shadow-xs">
+                {/* Left & Right Edge Gradient Fades for Smooth Seamless Transition */}
+                <div
+                  className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 sm:w-20 bg-gradient-to-r from-slate-50/95 via-slate-50/60 to-transparent"
+                  aria-hidden="true"
+                />
+                <div
+                  className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 sm:w-20 bg-gradient-to-l from-slate-50/95 via-slate-50/60 to-transparent"
+                  aria-hidden="true"
+                />
 
-                {/* 2 Vertical Marquee Columns */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 h-full">
-                  {/* Kolom Pertama: Scroll ke Atas */}
-                  <div className="relative overflow-hidden">
-                    <div className="client-marquee-up flex flex-col gap-3 sm:gap-3.5 hover:[animation-play-state:paused]">
-                      {duplicatedCol1.map((client, idx) => (
+                <div className="flex flex-col gap-3.5 sm:gap-4 overflow-hidden">
+                  {/* Baris Pertama: Bergerak dari Kanan ke Kiri */}
+                  <div className="relative w-full overflow-hidden">
+                    <div className="client-marquee-left flex gap-3.5 sm:gap-4">
+                      {duplicatedRow1.map((client, idx) => (
                         <div
-                          key={`col1-${client.name}-${idx}`}
-                          className="flex h-16 sm:h-20 items-center justify-center rounded-xl border border-slate-200/80 bg-white p-3 sm:p-4 shadow-2xs transition duration-200 hover:border-blue-400 hover:shadow-sm"
+                          key={`row1-${client.name}-${idx}`}
+                          className="flex h-[76px] w-[170px] shrink-0 items-center justify-center rounded-2xl border border-slate-200/80 bg-white px-5 py-3 shadow-[0_2px_8px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-0.5 hover:border-blue-400 hover:shadow-md sm:h-[84px] sm:w-[195px] sm:px-6 sm:py-3.5"
                           title={client.name}
                         >
-                          <div className="relative h-9 sm:h-11 w-full flex items-center justify-center">
+                          <div className="relative flex h-full w-full items-center justify-center">
                             <Image
                               src={client.logo}
                               alt={client.name}
                               fill
-                              sizes="(min-width: 1024px) 180px, 140px"
-                              className="object-contain filter grayscale opacity-80 transition duration-300 hover:filter-none hover:opacity-100"
+                              sizes="195px"
+                              className="object-contain"
                             />
                           </div>
                         </div>
@@ -92,22 +97,22 @@ export function ClientsSection() {
                     </div>
                   </div>
 
-                  {/* Kolom Kedua: Scroll ke Bawah */}
-                  <div className="relative overflow-hidden">
-                    <div className="client-marquee-down flex flex-col gap-3 sm:gap-3.5 hover:[animation-play-state:paused]">
-                      {duplicatedCol2.map((client, idx) => (
+                  {/* Baris Kedua: Bergerak Berlawanan Arah (dari Kiri ke Kanan) */}
+                  <div className="relative w-full overflow-hidden">
+                    <div className="client-marquee-right flex gap-3.5 sm:gap-4">
+                      {duplicatedRow2.map((client, idx) => (
                         <div
-                          key={`col2-${client.name}-${idx}`}
-                          className="flex h-16 sm:h-20 items-center justify-center rounded-xl border border-slate-200/80 bg-white p-3 sm:p-4 shadow-2xs transition duration-200 hover:border-blue-400 hover:shadow-sm"
+                          key={`row2-${client.name}-${idx}`}
+                          className="flex h-[76px] w-[170px] shrink-0 items-center justify-center rounded-2xl border border-slate-200/80 bg-white px-5 py-3 shadow-[0_2px_8px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-0.5 hover:border-blue-400 hover:shadow-md sm:h-[84px] sm:w-[195px] sm:px-6 sm:py-3.5"
                           title={client.name}
                         >
-                          <div className="relative h-9 sm:h-11 w-full flex items-center justify-center">
+                          <div className="relative flex h-full w-full items-center justify-center">
                             <Image
                               src={client.logo}
                               alt={client.name}
                               fill
-                              sizes="(min-width: 1024px) 180px, 140px"
-                              className="object-contain filter grayscale opacity-75 transition duration-300 hover:filter-none hover:opacity-100"
+                              sizes="195px"
+                              className="object-contain"
                             />
                           </div>
                         </div>

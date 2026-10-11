@@ -20,8 +20,8 @@ export function CtaBanner() {
                 sizes="(min-width: 1024px) 1200px, 100vw"
                 className="object-cover object-right md:object-center"
               />
-              {/* Soft overlay on left side to guarantee high contrast text legibility */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#071F42]/95 via-[#071F42]/85 to-transparent lg:w-3/5" />
+              {/* Soft overlay on left side to guarantee high contrast text legibility while revealing background artwork */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#071F42]/85 via-[#071F42]/50 to-transparent lg:w-3/5" />
               {/* Bottom edge fade on mobile */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#071F42]/70 via-transparent to-transparent md:hidden" />
             </div>
