@@ -54,7 +54,7 @@ export function TourPackages() {
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent" />
 
                     {/* Tag Badge */}
                     <span className="absolute left-3 top-3 rounded-md bg-[#2563EB] px-2.5 py-1 text-[10px] font-bold text-white shadow-xs">
@@ -69,7 +69,7 @@ export function TourPackages() {
 
                     {/* Title on Image */}
                     <div className="absolute bottom-3 left-3.5 right-3.5">
-                      <h3 className="text-base font-bold text-white leading-snug">
+                      <h3 className="text-base font-bold text-white leading-snug drop-shadow-sm">
                         {pkg.title}
                       </h3>
                     </div>

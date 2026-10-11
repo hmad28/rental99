@@ -205,7 +205,7 @@ export const TOUR_PACKAGES_DATA: TourPackage[] = [
     title: "Sasak Traditional & Mandalika Tour",
     tag: "Paling Populer",
     duration: "1 Hari (Full Day)",
-    image: "/images/gallery-journey.png",
+    image: "/images/tours/sasak-mandalika.png",
     destinations: [
       "Desa Sukarara (Sentra Tenun Songket Khas Lombok)",
       "Desa Sade / Ende (Perkampungan Adat Suku Sasak)",
@@ -225,7 +225,7 @@ export const TOUR_PACKAGES_DATA: TourPackage[] = [
     title: "Gili Trawangan 3 Island Snorkeling Tour",
     tag: "Best Seller",
     duration: "1 Hari (Full Day)",
-    image: "/images/gallery-fleet.png",
+    image: "/images/tours/gili-trawangan.png",
     destinations: [
       "Pelabuhan Teluk Nare / Bangsal",
       "Snorkeling Patung Bawah Air Gili Meno",
@@ -245,7 +245,7 @@ export const TOUR_PACKAGES_DATA: TourPackage[] = [
     title: "Sembalun Highland & Air Terjun Rinjani",
     tag: "Favorite Nature",
     duration: "1 Hari (Full Day)",
-    image: "/images/gallery-interior.png",
+    image: "/images/tours/sembalun-waterfall.png",
     destinations: [
       "Bukit Selong (Panorama Petak Sawah Berwarna)",
       "Desa Adat Beleq Sembalun",
