@@ -422,7 +422,7 @@ export const BRAND_INFO = {
   claim: "Transportasi terpercaya sejak tahun 2012",
   phone: "+62 878-6461-5865",
   whatsapp: "6287864615865",
-  email: "info@rental99.id",
+  email: "rentallombok99@gmail.com",
   address: "Area Bandara Internasional Lombok (BIZAM), Praya, Lombok Tengah, NTB",
   logoUrl: "/images/rental99-logo.png",
   iconUrl: "/images/rental99-icon.png",
